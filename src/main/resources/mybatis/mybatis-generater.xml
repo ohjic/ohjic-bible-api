@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+         <!DOCTYPE generatorConfiguration
+           PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+           "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+         <generatorConfiguration>
+         <!--데이터 구동-->
+         <classPathEntry    location="mysql-connector-java-5.0.8-bin.jar"/>
+         <context id="DB2Tables"    targetRuntime="MyBatis3">
+             <commentGenerator>
+                 <property name="suppressDate" value="true"/>
+                 <property name="suppressAllComments" value="true"/>
+             </commentGenerator>
+             <!--데이터베이스 연결 주소 계좌 비밀번호-->
+             <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/bangGoo?characterEncoding=euckr" userId="root" password="as455748">
+             </jdbcConnection>
+             <javaTypeResolver>
+                 <property name="forceBigDecimals" value="false"/>
+             </javaTypeResolver>
+             <!--생성 있었거든요 클래스 저장 위치-->
+             <javaModelGenerator targetPackage="src.main.java.ohjic.bible.ohbibleModel" targetProject="ohBible">
+                 <property name="enableSubPackages" value="true"/>
+                 <property name="trimStrings" value="true"/>
+             </javaModelGenerator>
+             <!--생성 맵 파일 저장 위치-->
+             <sqlMapGenerator targetPackage="src.main.java.ohjic.bible.ohbibleVo" targetProject="ohBible">
+                 <property name="enableSubPackages" value="true"/>
+             </sqlMapGenerator>
+             <!--생성 Dao 클래스 저장 위치-->
+             <javaClientGenerator type="XMLMAPPER" targetPackage="src.main.java.ohjic.bible.OhbibleGenerater" targetProject="ohBible">
+                 <property name="enableSubPackages" value="true"/>
+             </javaClientGenerator>
+             <!--생성 대응 목록 및 类名-->
+             <table tableName="message" domainObjectName="Messgae" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+         </context>
+     </generatorConfiguration>
