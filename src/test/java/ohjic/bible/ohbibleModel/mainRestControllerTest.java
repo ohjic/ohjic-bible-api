@@ -1,7 +1,8 @@
 package ohjic.bible.ohbibleModel;
 
-import ohjic.bible.ohbibleController.MainRestController;
-import ohjic.bible.ohbibleService.MainService;
+import ohjic.bible.controller.MainRestController;
+import ohjic.bible.service.MainService;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,7 +1,8 @@
-package ohjic.bible.ohbibleService;
+package ohjic.bible.service;
 
-import ohjic.bible.ohbibleModel.MainDao;
-import ohjic.bible.ohbibleVo.MainVO;
+import ohjic.bible.model.MainDao;
+import ohjic.bible.vo.MainVO;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

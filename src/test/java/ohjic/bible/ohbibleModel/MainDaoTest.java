@@ -1,6 +1,8 @@
 package ohjic.bible.ohbibleModel;
 
-import ohjic.bible.ohbibleVo.MainVO;
+import ohjic.bible.model.MainDao;
+import ohjic.bible.vo.MainVO;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;

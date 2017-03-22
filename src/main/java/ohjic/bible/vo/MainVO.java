@@ -1,4 +1,4 @@
-package ohjic.bible.ohbibleVo;
+package ohjic.bible.vo;
 
 import java.util.Date;
 

@@ -1,9 +1,10 @@
-package ohjic.bible.ohbibleController;
+package ohjic.bible.controller;
 
 
-import ohjic.bible.ohbibleService.BibleSearchServiceImpl;
-import ohjic.bible.ohbibleVo.BibleContentVO;
-import ohjic.bible.ohbibleVo.BibleSerchVO;
+import ohjic.bible.service.BibleSearchServiceImpl;
+import ohjic.bible.vo.BibleContentVO;
+import ohjic.bible.vo.BibleSerchVO;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

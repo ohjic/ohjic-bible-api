@@ -1,14 +1,15 @@
-package ohjic.bible.ohbibleController; /**
+package ohjic.bible.controller; /**
  * Created by hwangseong-in on 2017. 2. 20..
  */
 
-import ohjic.bible.ohbibleVo.MainVO;
+import ohjic.bible.service.MainService;
+import ohjic.bible.vo.MainVO;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import ohjic.bible.ohbibleService.MainService;
 
 import java.util.List;
 

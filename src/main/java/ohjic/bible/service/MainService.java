@@ -1,8 +1,8 @@
-package ohjic.bible.ohbibleService;
-
-import ohjic.bible.ohbibleVo.MainVO;
+package ohjic.bible.service;
 
 import java.util.List;
+
+import ohjic.bible.vo.MainVO;
 
 /**
  * Created by hwangseong-in on 2017. 2. 20..
