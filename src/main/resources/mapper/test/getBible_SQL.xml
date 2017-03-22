@@ -3,15 +3,27 @@
 
 <mapper namespace="getBible">
 
+
     <select id="bibleContents" resultType="ohjic.bible.ohbibleVo.BibleContentVO" parameterType="ohjic.bible.ohbibleVo.BibleSerchVO" >
-        SELECT bk.bible_kind as bibleKind,bk.language, bk.book_name as bookName, bk.book_max_chapter as bookMaxChapter
-              , bk.chapter_max_paragraph as ChapterMaxParagraph ,bkv.paragraph_value as paragraphValue, bkv.chapter, bkv.paragraph
-        FROM bible as b
-        JOIN bible_book bk ON bk.bible_idx = b.bible_idx
-        JOIN bible_book_kind_value bkv ON bk.book_kind_idx = bkv.book_kind_idx
+
+        SELECT bk.bible_kind as bibleKind,bk.language, bk.book_name as bookName, bk.bible_max_chapter as bookMaxChapter
+        , bbkv.chapter_max_paragraph as ChapterMaxParagraph ,bbkv.paragraph_value as paragraphValue, bbkv.chapter, bbkv.paragraph
+        FROM bible_book_kind_value_seconds as bbkv
+        JOIN bible b ON b.bible_idx = bbkv.bible_idx
+        JOIN book_kind bk ON bk.book_kind_idx = bbkv.book_kind_idx
         WHERE b.bible_idx = #{bibleIdx} and bk.book_kind_idx = #{bookKindIdx}
-        <if test="SearchRange == 'chapter'"> and bkv.chapter BETWEEN #{firstChapter} and #{lastChapter}  </if>
-        <if test="SearchRange == 'paragraph'"> and bkv.chapter = #{chapter} AND bkv.paragraph BETWEEN #{firstParagraph} and #{lastParagraph}</if>
+        <if test="searchRange == 'chapter'"> and bbkv.chapter BETWEEN #{firstChapter} and #{lastChapter}  </if>
+        <if test="searchRange == 'paragraph'"> and bbkv.chapter = #{chapter} AND bbkv.paragraph BETWEEN #{firstParagraph} and #{lastParagraph}</if>
+    </select>
+
+    <select id="getbibleSearch" resultType="ohjic.bible.ohbibleVo.BibleContentVO" parameterType="ohjic.bible.ohbibleVo.BibleSerchVO" >
+        SELECT bk.bible_kind as bibleKind,bk.language, bk.book_name as bookName, bk.bible_max_chapter as bookMaxChapter
+        , bbkv.chapter_max_paragraph as ChapterMaxParagraph ,bbkv.paragraph_value as paragraphValue, bbkv.chapter, bbkv.paragraph
+        FROM bible_book_kind_value_seconds as bbkv
+        JOIN book_kind as bk ON bk.book_kind_idx = bbkv.book_kind_idx
+        WHERE (bk.book_name = #{bookName} or bk.book_name_short = #{bookName})
+        <if test="searchRange == 'chapter'"> and bbkv.chapter = #{chapter} </if>
+        <if test="searchRange == 'paragraph'"> and bbkv.chapter = #{chapter} AND bbkv.paragraph BETWEEN #{firstParagraph} and #{lastParagraph}</if>
 
     </select>
 

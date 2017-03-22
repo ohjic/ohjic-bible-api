@@ -10,4 +10,10 @@ public class TestJunit {
         TimeUnit.SECONDS.sleep(1);
         return (first * 2) * seconds  ;
     }
+
+    public String[] testBibleSplit(String TargetText, String replaceMatchValue,String replaceChangeValue,String SplitValue){
+        String replaceCalcValue = TargetText.replace(replaceMatchValue,replaceChangeValue);
+        String[] splitValueList = replaceCalcValue.split(SplitValue);
+        return splitValueList;
+    }
 }

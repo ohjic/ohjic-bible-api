@@ -10,6 +10,8 @@ public class BibleSerchVO {
     private int bibleIdx;
     /*성경 책 종류 키*/
     private int bookKindIdx;
+    /*성경 책 이름*/
+    private String bookName;
     /*장*/
     private int chapter;
     /*절*/
@@ -23,7 +25,7 @@ public class BibleSerchVO {
     /*절 범위 검색용 마지막 값*/
     private int lastParagraph;
     /* 장 절 검색 여부 플래그 */
-    private String SearchRange;
+    private String searchRange;
 
     public BibleSerchVO(int bibleIdx, int bookKindIdx, int chapter, int firstParagraph, int lastParagraph, String searchRange) {
         this.bibleIdx = bibleIdx;
@@ -31,7 +33,7 @@ public class BibleSerchVO {
         this.chapter = chapter;
         this.firstParagraph = firstParagraph;
         this.lastParagraph = lastParagraph;
-        SearchRange = searchRange;
+        this.searchRange = searchRange;
     }
 
     public BibleSerchVO(int bibleIdx, int bookKindIdx, int firstChapter, int lastChapter, String searchRange) {
@@ -39,8 +41,25 @@ public class BibleSerchVO {
         this.bookKindIdx = bookKindIdx;
         this.firstChapter = firstChapter;
         this.lastChapter = lastChapter;
-        SearchRange = searchRange;
+        this.searchRange = searchRange;
     }
+
+    public BibleSerchVO(int bibleIdx, String bookName, int chapter, int firstParagraph, int lastParagraph, String searchRange) {
+        this.bibleIdx = bibleIdx;
+        this.bookName = bookName;
+        this.chapter = chapter;
+        this.firstParagraph = firstParagraph;
+        this.lastParagraph = lastParagraph;
+        this.searchRange = searchRange;
+    }
+
+    public BibleSerchVO(int bibleIdx, String bookName, int chapter, String searchRange) {
+        this.bibleIdx = bibleIdx;
+        this.bookName = bookName;
+        this.chapter = chapter;
+        this.searchRange = searchRange;
+    }
+
 
     public int getBibleIdx() {
         return bibleIdx;
@@ -106,15 +125,19 @@ public class BibleSerchVO {
         this.lastParagraph = lastParagraph;
     }
 
-    public String getSearchRange() {
-        return SearchRange;
+    public String getsearchRange() {
+        return searchRange;
     }
 
-    public void setSearchRange(String searchRange) {
-        SearchRange = searchRange;
+    public void setsearchRange(String searchRange) {
+        this.searchRange = searchRange;
     }
 
+    public String getBookName() {
+        return bookName;
+    }
 
-
-
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
+    }
 }

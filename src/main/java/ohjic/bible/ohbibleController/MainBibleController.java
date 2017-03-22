@@ -1,7 +1,7 @@
 package ohjic.bible.ohbibleController;
 
 
-import ohjic.bible.ohbibleService.MainBibleServiceImpl;
+import ohjic.bible.ohbibleService.BibleSearchServiceImpl;
 import ohjic.bible.ohbibleVo.BibleContentVO;
 import ohjic.bible.ohbibleVo.BibleSerchVO;
 import org.slf4j.Logger;
@@ -23,14 +23,16 @@ public class MainBibleController {
      protected static Logger LOGGER = LoggerFactory.getLogger(MainBibleController.class);
 
     @Autowired
-    private MainBibleServiceImpl mainBibleService;
+    private BibleSearchServiceImpl bibleSearchService;
 
     @RequestMapping(value = "/chapter", method = RequestMethod.GET, headers = "accept=application/json")
     public List<BibleContentVO> getBibleChapterContents(){
         /*유지보수에서는 객체를 넘기는것이 용이*/
+        /*컨트롤러 단 파라미터를 객체로 직업 받아 버리다.*/
         BibleSerchVO bibleSerchVO = new BibleSerchVO(1,1,1,1,"chapter");
+
         /*로깅처리 할수 있도록*/
-        List<BibleContentVO> capterContents = mainBibleService.getChapterContents(bibleSerchVO);
+        List<BibleContentVO> capterContents = bibleSearchService.getChapterContents(bibleSerchVO);
         LOGGER.info("================로그 체킹 테스트 중입니다================","xptmxm");
         return capterContents;
     }
@@ -38,7 +40,7 @@ public class MainBibleController {
     @RequestMapping(value = "/paragraph", method = RequestMethod.GET, headers = "accept=application/json")
     public List<BibleContentVO> getBibleParagraphContents(){
         BibleSerchVO bibleSerchVO = new BibleSerchVO(1,1,1,1,2,"paragraph");
-        List<BibleContentVO> ParagraphContents = mainBibleService.getParagraphContents(bibleSerchVO);
+        List<BibleContentVO> ParagraphContents = bibleSearchService.getParagraphContents(bibleSerchVO);
 
         return ParagraphContents;
     }
