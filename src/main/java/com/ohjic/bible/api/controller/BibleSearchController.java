@@ -1,27 +1,28 @@
 package com.ohjic.bible.api.controller;
 
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ohjic.bible.api.service.BibleSearchServiceImpl;
+import com.ohjic.bible.api.vo.BibleContentJsonVO;
 import com.ohjic.bible.api.vo.BibleContentVO;
 import com.ohjic.bible.api.vo.BibleSerchVO;
 
 import java.util.List;
 
 /**
- * Created by hwangseong-in on 2017. 3. 13..
+ * Created by hwangseong-in on 2017. 3. 20..
  */
 @RestController
-@RequestMapping(value = "/bible")
-public class MainBibleController {
+@RequestMapping(value = "/search")
+public class BibleSearchController {
 
-     protected static Logger LOGGER = LoggerFactory.getLogger(MainBibleController.class);
+    protected static Logger LOGGER = LoggerFactory.getLogger(BibleSearchController.class);
 
     @Autowired
     private BibleSearchServiceImpl bibleSearchService;
@@ -49,6 +50,12 @@ public class MainBibleController {
     @RequestMapping(value = "/bookList", method = RequestMethod.GET, headers = "accept=application/json")
     public List<BibleContentVO> getBibleBookLists(){
         return null;
+    }
+
+    @RequestMapping(value = "/sentence/{bibleIdx}/{textValue}", method = RequestMethod.GET, headers = "accept=application/json")
+    public  BibleContentJsonVO getBibleForSentence(@PathVariable int bibleIdx ,@PathVariable String textValue){
+        BibleContentJsonVO bibleContentJsonVO = bibleSearchService.getParagraphContentsForSentence(bibleIdx,textValue);
+        return bibleContentJsonVO;
     }
 
 }

@@ -1,10 +1,5 @@
 package com.ohjic.bible.api.controller;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-import java.util.stream.Collectors;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ohjic.bible.api.service.MainService;
 import com.ohjic.bible.api.vo.MainVO;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 /**
  * Created by hwangseong-in on 2017. 2. 21..

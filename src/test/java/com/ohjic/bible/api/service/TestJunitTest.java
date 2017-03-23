@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import com.ohjic.bible.api.vo.BibleContentJsonVO;
 import com.ohjic.bible.api.vo.BibleSerchVO;
 
 /**
