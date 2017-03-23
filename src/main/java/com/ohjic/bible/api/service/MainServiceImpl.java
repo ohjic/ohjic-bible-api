@@ -1,12 +1,12 @@
 package com.ohjic.bible.api.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ohjic.bible.api.model.MainDao;
 import com.ohjic.bible.api.vo.MainVO;
+
+import java.util.List;
 
 /**
  * Created by hwangseong-in on 2017. 2. 20..

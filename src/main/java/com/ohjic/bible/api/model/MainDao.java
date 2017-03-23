@@ -1,12 +1,12 @@
 package com.ohjic.bible.api.model;
 
-import java.util.List;
-
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.ohjic.bible.api.vo.MainVO;
+
+import java.util.List;
 
 /**
  * Created by hwangseong-in on 2017. 2. 20..
