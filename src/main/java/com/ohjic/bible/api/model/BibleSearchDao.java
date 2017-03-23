@@ -21,4 +21,8 @@ public class BibleSearchDao {
     public List<BibleContentVO> selectBibleContents(String queryId, BibleSerchVO bibleSerchVO){
         return sqlSession.selectList(queryId,bibleSerchVO);
     }
+
+    public BibleSerchVO selectBibleSearchKey(String queryId){
+        return sqlSession.selectOne(queryId);
+    }
 }

@@ -86,9 +86,45 @@ public class BibleSearchServiceImpl implements BibleSearchService{
     }
 
     @Override
+    public BibleContentJsonVO getParagraphContentsForParagraphValue(int bibleIdx, String paragraphValue,int limit) {
+        BibleContentJsonVO bibleContentJsonVO;
+        System.out.println(limit);
+        System.out.println(limit+20);
+        System.out.println("=======================");
+
+        BibleSerchVO bibleSerchVO = new BibleSerchVO(bibleIdx,paragraphValue,limit, limit + 20);
+        List<BibleContentVO> bibleContentVO = bibleSearchDao.selectBibleContents("getBible.getBibleParagraphValueSearch",bibleSerchVO);
+        if(bibleContentVO.size() >0){
+             bibleContentJsonVO = new BibleContentJsonVO("success","성공",bibleContentVO);
+        }else{
+             bibleContentJsonVO = new BibleContentJsonVO("none","조회 결과가 없습니다");
+        }
+
+        return bibleContentJsonVO;
+    }
+
+    @Override
     public String[] sentenceReplaceAndSplit(String TargetText, String replaceMatchValue,String replaceChangeValue,String SplitValue) {
         String replaceCalcValue = TargetText.replace(replaceMatchValue,replaceChangeValue);
         String[] splitValueList = replaceCalcValue.split(SplitValue);
         return splitValueList;
     }
+
+    @Override
+    public BibleContentJsonVO getTodayParagraphValue(int bibleIdx) {
+        BibleSerchVO bibleSerchVO = bibleSearchDao.selectBibleSearchKey("getBible.selectTodayParagraphKey");
+        if(bibleSerchVO == null){
+            System.out.println("널값");
+        }else{
+            System.out.println("널 아님");
+        }
+        return null;
+    }
+
+    @Override
+    public void registTodayParagraphValue() {
+
+    }
+
+
 }

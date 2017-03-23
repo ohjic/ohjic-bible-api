@@ -3,10 +3,7 @@ package com.ohjic.bible.api.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.ohjic.bible.api.service.BibleSearchServiceImpl;
 import com.ohjic.bible.api.vo.BibleContentJsonVO;
@@ -57,5 +54,19 @@ public class BibleSearchController {
         BibleContentJsonVO bibleContentJsonVO = bibleSearchService.getParagraphContentsForSentence(bibleIdx,textValue);
         return bibleContentJsonVO;
     }
+
+    @RequestMapping(value = "/paragraph/{bibleIdx}/{paragraphValue}", method = RequestMethod.GET, headers = "accept=application/json")
+    public  BibleContentJsonVO getBibleForParagraphValue(@PathVariable int bibleIdx ,@PathVariable String paragraphValue,
+                                                         @RequestParam(value = "limit" ,required = true,defaultValue = "0") int Limit){
+        BibleContentJsonVO bibleContentJsonVO = bibleSearchService.getParagraphContentsForParagraphValue(bibleIdx,paragraphValue,Limit);
+        return bibleContentJsonVO;
+    }
+
+    @RequestMapping(value = "/todayParagraph/{bibleIdx}", method = RequestMethod.GET, headers = "accept=application/json")
+    public  BibleContentJsonVO getBibleForParagraphValue(@PathVariable int bibleIdx ){
+        BibleContentJsonVO bibleContentJsonVO = bibleSearchService.getTodayParagraphValue(bibleIdx);
+        return bibleContentJsonVO;
+    }
+
 
 }

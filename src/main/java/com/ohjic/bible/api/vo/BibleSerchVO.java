@@ -16,6 +16,8 @@ public class BibleSerchVO {
     private int chapter;
     /*절*/
     private int paragraph;
+    /*절 내용*/
+    private String paragraphValue;
     /*절 범위 검색용 시작 값 */
     private int firstChapter;
     /*절 범위 검색용 마지막 값*/
@@ -26,6 +28,22 @@ public class BibleSerchVO {
     private int lastParagraph;
     /* 장 절 검색 여부 플래그 */
     private String searchRange;
+    private int startLimit;
+    private int endLimit;
+
+    public BibleSerchVO(int bibleIdx, int bookKindIdx, String bookName, int chapter, int paragraph, String paragraphValue, int firstChapter, int lastChapter, int firstParagraph, int lastParagraph, String searchRange) {
+        this.bibleIdx = bibleIdx;
+        this.bookKindIdx = bookKindIdx;
+        this.bookName = bookName;
+        this.chapter = chapter;
+        this.paragraph = paragraph;
+        this.paragraphValue = paragraphValue;
+        this.firstChapter = firstChapter;
+        this.lastChapter = lastChapter;
+        this.firstParagraph = firstParagraph;
+        this.lastParagraph = lastParagraph;
+        this.searchRange = searchRange;
+    }
 
     public BibleSerchVO(int bibleIdx, int bookKindIdx, int chapter, int firstParagraph, int lastParagraph, String searchRange) {
         this.bibleIdx = bibleIdx;
@@ -59,6 +77,14 @@ public class BibleSerchVO {
         this.chapter = chapter;
         this.searchRange = searchRange;
     }
+
+    public BibleSerchVO(int bibleIdx, String paragraphValue,int startLimit,int endLimit) {
+        this.bibleIdx = bibleIdx;
+        this.paragraphValue = paragraphValue;
+        this.startLimit = startLimit;
+        this.endLimit = endLimit;
+    }
+
 
 
     public int getBibleIdx() {
@@ -139,5 +165,29 @@ public class BibleSerchVO {
 
     public void setBookName(String bookName) {
         this.bookName = bookName;
+    }
+
+    public String getParagraphValue() {
+        return paragraphValue;
+    }
+
+    public void setParagraphValue(String paragraphValue) {
+        this.paragraphValue = paragraphValue;
+    }
+
+    public int getEndLimit() {
+        return endLimit;
+    }
+
+    public void setEndLimit(int endLimit) {
+        this.endLimit = endLimit;
+    }
+
+    public int getStartLimit() {
+        return startLimit;
+    }
+
+    public void setStartLimit(int startLimit) {
+        this.startLimit = startLimit;
     }
 }

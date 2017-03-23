@@ -14,5 +14,8 @@ public interface BibleSearchService {
     public List<BibleContentVO> getChapterContents(BibleSerchVO bibleSerchVO);
     public List<BibleContentVO> getParagraphContents(BibleSerchVO bibleSerchVO);
     public BibleContentJsonVO getParagraphContentsForSentence(int bibleIdx, String searchSentence);
+    public BibleContentJsonVO getParagraphContentsForParagraphValue(int bibleIdx, String paragraphValue,int limit);
+    public BibleContentJsonVO getTodayParagraphValue(int bibleIdx);
+    public void registTodayParagraphValue();
     public String[] sentenceReplaceAndSplit(String TargetText, String replaceMatchValue,String replaceChangeValue,String SplitValue);
 }
