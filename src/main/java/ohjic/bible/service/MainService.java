@@ -1,6 +1,6 @@
-package ohjic.bible.ohbibleService;
+package ohjic.bible.service;
 
-import ohjic.bible.ohbibleVo.MainVO;
+import ohjic.bible.vo.MainVO;
 
 import java.util.List;
 

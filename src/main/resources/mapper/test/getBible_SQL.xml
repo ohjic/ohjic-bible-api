@@ -4,7 +4,7 @@
 <mapper namespace="getBible">
 
 
-    <select id="bibleContents" resultType="ohjic.bible.ohbibleVo.BibleContentVO" parameterType="ohjic.bible.ohbibleVo.BibleSerchVO" >
+    <select id="bibleContents" resultType="ohjic.bible.vo.BibleContentVO" parameterType="ohjic.bible.vo.BibleSerchVO" >
 
         SELECT bk.bible_kind as bibleKind,bk.language, bk.book_name as bookName, bk.bible_max_chapter as bookMaxChapter
         , bbkv.chapter_max_paragraph as ChapterMaxParagraph ,bbkv.paragraph_value as paragraphValue, bbkv.chapter, bbkv.paragraph
@@ -16,7 +16,7 @@
         <if test="searchRange == 'paragraph'"> and bbkv.chapter = #{chapter} AND bbkv.paragraph BETWEEN #{firstParagraph} and #{lastParagraph}</if>
     </select>
 
-    <select id="getbibleSearch" resultType="ohjic.bible.ohbibleVo.BibleContentVO" parameterType="ohjic.bible.ohbibleVo.BibleSerchVO" >
+    <select id="getbibleSearch" resultType="ohjic.bible.vo.BibleContentVO" parameterType="ohjic.bible.vo.BibleSerchVO" >
         SELECT bk.bible_kind as bibleKind,bk.language, bk.book_name as bookName, bk.bible_max_chapter as bookMaxChapter
         , bbkv.chapter_max_paragraph as ChapterMaxParagraph ,bbkv.paragraph_value as paragraphValue, bbkv.chapter, bbkv.paragraph
         FROM bible_book_kind_value_seconds as bbkv

@@ -1,7 +1,8 @@
 package ohjic.bible.ohbibleService;
 
 import ohjic.bible.ohbibleVo.BibleContentJsonVO;
-import ohjic.bible.ohbibleVo.BibleSerchVO;
+import ohjic.bible.vo.BibleSerchVO;
+import ohjic.bible.service.TestJunit;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

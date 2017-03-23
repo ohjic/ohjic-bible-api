@@ -1,9 +1,9 @@
-package ohjic.bible.ohbibleModel;
+package ohjic.bible.model;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import ohjic.bible.ohbibleVo.MainVO;
+import ohjic.bible.vo.MainVO;
 
 import java.util.List;
 

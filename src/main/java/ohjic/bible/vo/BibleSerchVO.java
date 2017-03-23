@@ -1,4 +1,4 @@
-package ohjic.bible.ohbibleVo;
+package ohjic.bible.vo;
 
 /**
  * Created by hwangseong-in on 2017. 3. 14..

@@ -1,7 +1,7 @@
-package ohjic.bible.ohbibleController;
+package ohjic.bible.controller;
 
-import ohjic.bible.ohbibleService.MainService;
-import ohjic.bible.ohbibleVo.MainVO;
+import ohjic.bible.service.MainService;
+import ohjic.bible.vo.MainVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

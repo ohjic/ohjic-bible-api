@@ -1,4 +1,4 @@
-package ohjic.bible.ohbibleService;
+package ohjic.bible.service;
 
 import java.util.concurrent.TimeUnit;
 
