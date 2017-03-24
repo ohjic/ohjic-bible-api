@@ -13,6 +13,7 @@
         JOIN book_kind bk ON bk.book_kind_idx = bbkv.book_kind_idx
         WHERE b.bible_idx = #{bibleIdx} and bk.book_kind_idx = #{bookKindIdx}
         <if test="searchRange == 'chapter'"> and bbkv.chapter BETWEEN #{firstChapter} and #{lastChapter}  </if>
+        <if test="searchRange == 'oneParagraph'"> and bbkv.chapter = #{chapter} AND bbkv.paragraph = #{paragraph}</if>
         <if test="searchRange == 'paragraph'"> and bbkv.chapter = #{chapter} AND bbkv.paragraph BETWEEN #{firstParagraph} and #{lastParagraph}</if>
     </select>
 
@@ -37,10 +38,21 @@
         ORDER BY bbkv.book_kind_value_idx LIMIT #{startLimit} , #{endLimit}
     </select>
 
+    <select id="selectTodayParagraphCount" resultType="int">
+        SELECT count(*) as count FROM today_paragraph
+        WHERE today = date_format(now(),'%Y-%m-%d')
+    </select>
+
     <select id="selectTodayParagraphKey" resultType="com.ohjic.bible.api.vo.BibleSerchVO" >
         SELECT book_kind_idx as bookKindIdx, chapter, paragraph FROM today_paragraph
-        WHERE today = date_format(now(),'%Y-%m-%d') limit 1
+        WHERE today = date(now()) limit 1
     </select>
+
+    <insert id="insertTodayParagraphKey">
+        INSERT INTO today_paragraph(today,book_kind_idx,chapter,paragraph)
+        SELECT date(NOW()), book_kind_idx, chapter, paragraph
+        FROM today_paragraph_pull ORDER BY RAND() LIMIT 1
+    </insert>
 
 
 </mapper>

@@ -40,10 +40,10 @@ public class BibleSearchServiceImpl implements BibleSearchService{
         String firstParagraph = "";
         String lastParagraph = "";
         String regExp = "[^0-9~-]";
-        String[] paragraphList;
-        BibleSerchVO bibleSerchVO;
-        BibleContentJsonVO bibleContentJsonVO;
-        List<BibleContentVO> bibleContentVOList;
+        String[] paragraphList = null;
+        BibleSerchVO bibleSerchVO = null;
+        BibleContentJsonVO bibleContentJsonVO = null;
+        List<BibleContentVO> bibleContentVOList = null;
 
         String[] splitValue = this.sentenceReplaceAndSplit(searchSentence,":"," "," ");
 
@@ -87,12 +87,10 @@ public class BibleSearchServiceImpl implements BibleSearchService{
 
     @Override
     public BibleContentJsonVO getParagraphContentsForParagraphValue(int bibleIdx, String paragraphValue,int limit) {
-        BibleContentJsonVO bibleContentJsonVO;
-        System.out.println(limit);
-        System.out.println(limit+20);
-        System.out.println("=======================");
+        BibleContentJsonVO bibleContentJsonVO = null;
+        BibleSerchVO bibleSerchVO = null;
 
-        BibleSerchVO bibleSerchVO = new BibleSerchVO(bibleIdx,paragraphValue,limit, limit + 20);
+        bibleSerchVO = new BibleSerchVO(bibleIdx,paragraphValue,limit, limit + 20);
         List<BibleContentVO> bibleContentVO = bibleSearchDao.selectBibleContents("getBible.getBibleParagraphValueSearch",bibleSerchVO);
         if(bibleContentVO.size() >0){
              bibleContentJsonVO = new BibleContentJsonVO("success","성공",bibleContentVO);
@@ -112,13 +110,29 @@ public class BibleSearchServiceImpl implements BibleSearchService{
 
     @Override
     public BibleContentJsonVO getTodayParagraphValue(int bibleIdx) {
-        BibleSerchVO bibleSerchVO = bibleSearchDao.selectBibleSearchKey("getBible.selectTodayParagraphKey");
-        if(bibleSerchVO == null){
-            System.out.println("널값");
-        }else{
-            System.out.println("널 아님");
+        BibleSerchVO bibleSerchVO = null;
+        BibleContentJsonVO bibleContentJsonVO = null;
+        List<BibleContentVO> bibleContentVOs = null;
+        int todayParagraphCount = 0;
+
+        todayParagraphCount = bibleSearchDao.selectTodayParagraphCount("getBible.selectTodayParagraphCount");
+
+        if(todayParagraphCount <= 0){
+            bibleSearchDao.InsertTodayParagraph("getBible.insertTodayParagraphKey");
         }
-        return null;
+
+        bibleSerchVO = bibleSearchDao.selectBibleSearchKey("getBible.selectTodayParagraphKey");
+        bibleSerchVO.setBibleIdx(bibleIdx);
+        bibleSerchVO.setsearchRange("oneParagraph");
+        bibleContentVOs = bibleSearchDao.selectBibleContents("getBible.bibleContents",bibleSerchVO);
+
+        if(bibleContentVOs.size() >0){
+            bibleContentJsonVO = new BibleContentJsonVO("success","성공",bibleContentVOs);
+        }else{
+            bibleContentJsonVO = new BibleContentJsonVO("none","조회 결과가 없습니다");
+        }
+
+        return bibleContentJsonVO;
     }
 
     @Override

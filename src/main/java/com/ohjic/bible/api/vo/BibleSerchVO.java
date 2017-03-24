@@ -31,6 +31,9 @@ public class BibleSerchVO {
     private int startLimit;
     private int endLimit;
 
+    public BibleSerchVO() {}
+
+
     public BibleSerchVO(int bibleIdx, int bookKindIdx, String bookName, int chapter, int paragraph, String paragraphValue, int firstChapter, int lastChapter, int firstParagraph, int lastParagraph, String searchRange) {
         this.bibleIdx = bibleIdx;
         this.bookKindIdx = bookKindIdx;

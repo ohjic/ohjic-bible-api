@@ -22,7 +22,16 @@ public class BibleSearchDao {
         return sqlSession.selectList(queryId,bibleSerchVO);
     }
 
+    public int selectTodayParagraphCount(String queryId){
+        return sqlSession.selectOne(queryId);
+    }
+
     public BibleSerchVO selectBibleSearchKey(String queryId){
         return sqlSession.selectOne(queryId);
     }
+
+    public void InsertTodayParagraph(String queryId){
+         sqlSession.insert(queryId);
+    }
+
 }
