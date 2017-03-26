@@ -6,29 +6,36 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bd83030-efa5-41b8-b788-a7cb03f28510" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ohBible/WEB-INF/classes/ohjic/bible/ohbibleController/MainBibleController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ohBible/WEB-INF/classes/ohjic/bible/ohbibleController/MainController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ohBible/WEB-INF/classes/ohjic/bible/ohbibleController/MainRestController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ohBible/WEB-INF/classes/ohjic/bible/ohbibleModel/MainDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ohBible/WEB-INF/classes/ohjic/bible/ohbibleService/MainService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ohBible/WEB-INF/classes/ohjic/bible/ohbibleService/MainServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ohBible/WEB-INF/classes/ohjic/bible/ohbibleService/TestJunit.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ohBible/WEB-INF/classes/ohjic/bible/ohbibleVo/BibleContentVO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ohBible/WEB-INF/classes/ohjic/bible/ohbibleVo/BibleSerchVO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ohBible/WEB-INF/classes/ohjic/bible/ohbibleVo/MainVO.class" afterPath="" />
+    <list default="true" id="6bd83030-efa5-41b8-b788-a7cb03f28510" name="Default" comment="VO">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_4.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/BibleContentJsonVO.java" afterPath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/BibleContentJsonModel.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/BibleContentVO.java" afterPath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/BibleContentModel.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/BibleSerchVO.java" afterPath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/BibleSearchModel.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/MainVO.java" afterPath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/MainModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/ohBible_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/ohBible_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ohBible.iml" afterPath="$PROJECT_DIR$/ohBible.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/controller/BibleSearchController.java" afterPath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/controller/BibleSearchController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/controller/MainBibleController.java" afterPath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/controller/MainBibleController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/controller/MainController.java" afterPath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/controller/MainController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/controller/MainRestController.java" afterPath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/controller/MainRestController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/model/BibleSearchDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/model/BibleSearchDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/model/MainDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/model/MainDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/service/BibleSearchService.java" afterPath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/service/BibleSearchService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/service/BibleSearchServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/service/BibleSearchServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/BibleSerchVO.java" afterPath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/BibleSerchVO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/service/MainService.java" afterPath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/service/MainService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/service/MainServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/service/MainServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/test/getBible_SQL.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/test/getBible_SQL.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/test/test_SQL.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/test/test_SQL.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring/dispatcher-Context.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring/dispatcher-Context.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/ohjic/bible/api/model/MainDaoTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/ohjic/bible/api/model/MainDaoTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/ohjic/bible/api/service/TestJunitTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/ohjic/bible/api/service/TestJunitTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/test/getBible_SQL.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/test/getBible_SQL.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/test/test_SQL.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/test/test_SQL.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/dispatcher-Context.xml" afterPath="$PROJECT_DIR$/target/classes/spring/dispatcher-Context.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ohBible/WEB-INF/classes/mapper/test/getBible_SQL.xml" afterPath="$PROJECT_DIR$/target/ohBible/WEB-INF/classes/mapper/test/getBible_SQL.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ohBible/WEB-INF/classes/mapper/test/test_SQL.xml" afterPath="$PROJECT_DIR$/target/ohBible/WEB-INF/classes/mapper/test/test_SQL.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ohBible/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/ohBible/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ohBible/WEB-INF/classes/spring/dispatcher-Context.xml" afterPath="$PROJECT_DIR$/target/ohBible/WEB-INF/classes/spring/dispatcher-Context.xml" />
     </list>
     <ignored path="ohBible.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,17 +66,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="getBible_SQL.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/test/getBible_SQL.xml">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.833334">
-              <caret line="34" column="62" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="62" />
-              <folding>
-                <marker date="1490264812000" expanded="true" signature="325:1070" placeholder="SELECT bk.bi... bible_book_kind_value_seconds" />
-                <marker date="1490264812000" expanded="true" signature="1244:1909" placeholder="SELECT bk.bi... bible_book_kind_value_seconds" />
-                <marker date="1490264812000" expanded="true" signature="2089:2669" placeholder="SELECT bk.bi... bible_book_kind_value_seconds" />
-                <marker date="1490264812000" expanded="true" signature="2785:2921" placeholder="SELECT book_... today_paragraph" />
-              </folding>
+            <state vertical-scroll-proportion="-13.039216">
+              <caret line="203" column="16" selection-start-line="203" selection-start-column="16" selection-end-line="203" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -77,9 +79,12 @@
       <file leaf-file-name="BibleSearchController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/controller/BibleSearchController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5169492">
-              <caret line="59" column="120" selection-start-line="59" selection-start-column="119" selection-end-line="59" selection-end-column="120" />
-              <folding />
+            <state vertical-scroll-proportion="0.38265306">
+              <caret line="37" column="106" selection-start-line="37" selection-start-column="106" selection-end-line="37" selection-end-column="106" />
+              <folding>
+                <element signature="e#3540#3541#0" expanded="true" />
+                <element signature="e#3567#3568#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,59 +93,46 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/service/BibleSearchService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="113" selection-start-line="16" selection-start-column="113" selection-end-line="16" selection-end-column="113" />
+              <caret line="16" column="117" selection-start-line="16" selection-start-column="117" selection-end-line="16" selection-end-column="117" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_SQL.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/test/test_SQL.xml">
+      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.875">
-              <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BibleSearchModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/BibleSearchModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
               <folding>
-                <marker date="1490260358000" expanded="true" signature="278:299" placeholder="SELECT * fro... article" />
-                <marker date="1490260358000" expanded="true" signature="420:441" placeholder="SELECT * fro... article" />
-                <marker date="1490260358000" expanded="true" signature="420:448" placeholder="SELECT * fro... article" />
-                <marker date="1490260358000" expanded="true" signature="420:461" placeholder="SELECT * fro... article" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BibleSearchServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/service/BibleSearchServiceImpl.java">
+      <file leaf-file-name="MainRestController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/controller/MainRestController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="98" column="14" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
+              <caret line="66" column="59" selection-start-line="66" selection-start-column="56" selection-end-line="66" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BibleSerchVO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/BibleSerchVO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="84" column="33" selection-start-line="84" selection-start-column="33" selection-end-line="84" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/service/MainService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BibleContentVO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/BibleContentVO.java">
+      <file leaf-file-name="BibleContentModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/BibleContentModel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
@@ -149,11 +141,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BibleContentJsonVO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/BibleContentJsonVO.java">
+      <file leaf-file-name="BibleSearchServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/service/BibleSearchServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <caret line="49" column="71" selection-start-line="49" selection-start-column="71" selection-end-line="49" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -163,12 +155,22 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/model/BibleSearchDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#715#716#0" expanded="true" />
-                <element signature="e#767#768#0" expanded="true" />
+                <element signature="e#734#735#0" expanded="true" />
+                <element signature="e#786#787#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BibleContentJsonModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/BibleContentJsonModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -202,13 +204,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/spring/ohbible_service/MainServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/ohbible_model/MainDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/ohbible_controller/mainController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/test.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/spring/ohbible_controller/mainRestController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ohjic/bible/ohbibleVo/MainVO.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/dispatcher-servlet.xml" />
         <option value="$PROJECT_DIR$/src/test/java/ohjic/bible/ohbibleService/TestMock.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-generater.xml" />
         <option value="$PROJECT_DIR$/src/test/java/ohjic/bible/ohbibleService/MainServiceImplTest.java" />
@@ -229,7 +224,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/log4j.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ohjic/common/logger/LoggerInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/ohjic/bible/ohbibleController/MainController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/logback.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ohjic/bible/ohbibleService/bibleSearchService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ohjic/bible/ohbibleModel/BibleSearchDao.java" />
@@ -247,10 +241,18 @@
         <option value="$PROJECT_DIR$/src/main/java/ohjic/bible/controller/MainBibleController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/test/test_SQL.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/spring/dispatcher-Context.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/model/BibleSearchDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/service/BibleSearchService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/ohjic/bible/api/model/MainDaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/BibleSerchVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/model/BibleSearchDao.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/ohjic/bible/api/model/BibleSearchDaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/test/getBible_SQL.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/ohjic/bible/api/service/TestJunitTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/BibleSearchVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/controller/MainBibleController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/BibleContentJsonModel.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/BibleSearchModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/service/BibleSearchServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/controller/BibleSearchController.java" />
       </list>
@@ -313,8 +315,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="width" value="1680" />
-    <option name="height" value="1050" />
+    <option name="x" value="1680" />
+    <option name="y" value="-127" />
+    <option name="width" value="2560" />
+    <option name="height" value="1440" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -525,6 +529,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -597,11 +602,49 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ohBible" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ohBible" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -620,14 +663,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -650,32 +685,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ohBible" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ohBible" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spring" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -827,9 +836,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -865,32 +873,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Unnamed">
-    <configuration default="false" name="MainDaoTest.testGetMainDaoData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="ohjic.bible.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="ohBible" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="ohjic.bible.ohbibleModel" />
-      <option name="MAIN_CLASS_NAME" value="ohjic.bible.ohbibleModel.MainDaoTest" />
-      <option name="METHOD_NAME" value="testGetMainDaoData" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="mainRestControllerTest.MainRestControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -905,32 +887,6 @@
       <option name="MAIN_CLASS_NAME" value="ohjic.bible.ohbibleModel.mainRestControllerTest" />
       <option name="METHOD_NAME" value="MainRestControllerTest" />
       <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="mainRestControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="ohjic.bible.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="ohBible" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="ohjic.bible.ohbibleModel" />
-      <option name="MAIN_CLASS_NAME" value="ohjic.bible.ohbibleModel.mainRestControllerTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -982,6 +938,58 @@
       <option name="PACKAGE_NAME" value="ohjic.bible.ohbibleService" />
       <option name="MAIN_CLASS_NAME" value="ohjic.bible.ohbibleService.TestJunitTest" />
       <option name="METHOD_NAME" value="testTestCalculaterTime" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="BibleSearchDaoTest.testGetMainDaoData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.ohjic.bible.api.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ohBible" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.ohjic.bible.api.model" />
+      <option name="MAIN_CLASS_NAME" value="com.ohjic.bible.api.model.BibleSearchDaoTest" />
+      <option name="METHOD_NAME" value="testGetMainDaoData" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="BibleSearchDaoTest.testGetMainDaosData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.ohjic.bible.api.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ohBible" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.ohjic.bible.api.model" />
+      <option name="MAIN_CLASS_NAME" value="com.ohjic.bible.api.model.BibleSearchDaoTest" />
+      <option name="METHOD_NAME" value="testGetMainDaosData" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1622,19 +1630,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Unnamed" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.MainDaoTest.testGetMainDaoData" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.mainRestControllerTest.MainRestControllerTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.mainRestControllerTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TestJunitTest.testTestCalculater" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.TestJunitTest.testTestCalculaterTime" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.mainRestControllerTest.MainRestControllerTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TestJunitTest.testTestCalculater" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TestJunitTest.testTestCalculaterTime" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.BibleSearchDaoTest.testGetMainDaoData" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.BibleSearchDaoTest.testGetMainDaosData" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TestJunitTest.testTestCalculaterTime" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TestJunitTest.testTestCalculater" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.mainRestControllerTest.MainRestControllerTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.MainDaoTest.testGetMainDaoData" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.mainRestControllerTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.BibleSearchDaoTest.testGetMainDaosData" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BibleSearchDaoTest.testGetMainDaoData" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TestJunitTest.testTestCalculaterTime" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TestJunitTest.testTestCalculater" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.mainRestControllerTest.MainRestControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1663,6 +1671,7 @@
       <workItem from="1490228479789" duration="96000" />
       <workItem from="1490228767891" duration="1325000" />
       <workItem from="1490232051197" duration="5191000" />
+      <workItem from="1490265521903" duration="6941000" />
     </task>
     <task id="LOCAL-00001" summary="패키지 구조 변경">
       <created>1490229099242</created>
@@ -1676,30 +1685,36 @@
       <option name="project" value="LOCAL" />
       <updated>1490259906357</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="오늘의 말씀 기능 추가">
+      <created>1490360620191</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1490360620191</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MainDaoTest_testGetMainDaoData - 2017.03.22 at 09h 18m 58s.xml">
-      <configuration name="MainDaoTest.testGetMainDaoData" configurationId="JUnit" />
+    <history-entry file="BibleSearchDaoTest_testGetMainDaoData - 2017.03.24 at 09h 16m 05s.xml">
+      <configuration name="BibleSearchDaoTest.testGetMainDaoData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestJunitTest_testTestCalculaterTime - 2017.03.21 at 19h 33m 13s.xml">
-      <configuration name="TestJunitTest.testTestCalculaterTime" configurationId="JUnit" />
+    <history-entry file="BibleSearchDaoTest_testGetMainDaosData - 2017.03.24 at 09h 16m 11s.xml">
+      <configuration name="BibleSearchDaoTest.testGetMainDaosData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestJunitTest_testTestCalculaterTime - 2017.03.21 at 20h 05m 53s.xml">
-      <configuration name="TestJunitTest.testTestCalculaterTime" configurationId="JUnit" />
+    <history-entry file="BibleSearchDaoTest_testGetMainDaosData - 2017.03.24 at 09h 20m 51s.xml">
+      <configuration name="BibleSearchDaoTest.testGetMainDaosData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestJunitTest_testTestCalculaterTime - 2017.03.22 at 09h 12m 58s.xml">
-      <configuration name="TestJunitTest.testTestCalculaterTime" configurationId="JUnit" />
+    <history-entry file="BibleSearchDaoTest_testGetMainDaosData - 2017.03.24 at 09h 31m 10s.xml">
+      <configuration name="BibleSearchDaoTest.testGetMainDaosData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestJunitTest_testTestCalculaterTime - 2017.03.22 at 09h 19m 21s.xml">
-      <configuration name="TestJunitTest.testTestCalculaterTime" configurationId="JUnit" />
+    <history-entry file="BibleSearchDaoTest_testGetMainDaosData - 2017.03.24 at 09h 53m 12s.xml">
+      <configuration name="BibleSearchDaoTest.testGetMainDaosData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestJunitTest_testTestCalculaterTime - 2017.03.22 at 09h 20m 21s.xml">
-      <configuration name="TestJunitTest.testTestCalculaterTime" configurationId="JUnit" />
+    <history-entry file="BibleSearchDaoTest_testGetMainDaosData - 2017.03.24 at 09h 54m 20s.xml">
+      <configuration name="BibleSearchDaoTest.testGetMainDaosData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestJunitTest_testTestCalculaterTime - 2017.03.22 at 09h 28m 03s.xml">
-      <configuration name="TestJunitTest.testTestCalculaterTime" configurationId="JUnit" />
+    <history-entry file="BibleSearchDaoTest_testGetMainDaosData - 2017.03.24 at 09h 54m 43s.xml">
+      <configuration name="BibleSearchDaoTest.testGetMainDaosData" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TestJunitTest_testTestCalculaterTime - 2017.03.22 at 09h 28m 50s.xml">
       <configuration name="TestJunitTest.testTestCalculaterTime" configurationId="JUnit" />
@@ -1712,7 +1727,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91315000" />
+    <option name="totallyTimeSpent" value="98256000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1724,7 +1739,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="1680" y="-127" width="2560" height="1440" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1736,12 +1751,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36938775" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2642336" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18681319" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12152502" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1802,7 +1817,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="패키지 구조 변경" />
     <MESSAGE value="Merge remote-tracking branch 'remotes/origin/master' into ApiSungin&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'remotes/origin/master' into ApiSungin&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;" />
+    <MESSAGE value="오늘의 말씀 기능 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="오늘의 말씀 기능 추가" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1815,15 +1831,52 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/BibleContentJsonModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="e#641#642#0" expanded="false" />
+            <element signature="e#670#671#0" expanded="false" />
+            <element signature="e#714#715#0" expanded="false" />
+            <element signature="e#750#751#0" expanded="false" />
+            <element signature="e#780#781#0" expanded="false" />
+            <element signature="e#806#807#0" expanded="false" />
+            <element signature="e#844#845#0" expanded="false" />
+            <element signature="e#874#875#0" expanded="false" />
+            <element signature="e#939#940#0" expanded="false" />
+            <element signature="e#983#984#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/model/BibleSearchDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#734#735#0" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
+            <element signature="e#853#854#0" expanded="true" />
+            <element signature="e#905#906#0" expanded="true" />
+            <element signature="e#960#961#0" expanded="true" />
+            <element signature="e#1003#1004#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/test/getBible_SQL.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1490264812000" expanded="true" signature="325:1070" placeholder="SELECT bk.bi... bible_book_kind_value_seconds" />
-            <marker date="1490264812000" expanded="true" signature="1244:1909" placeholder="SELECT bk.bi... bible_book_kind_value_seconds" />
-            <marker date="1490264812000" expanded="true" signature="2089:2669" placeholder="SELECT bk.bi... bible_book_kind_value_seconds" />
-            <marker date="1490264812000" expanded="true" signature="2785:2921" placeholder="SELECT book_... today_paragraph" />
+            <marker date="1490518123000" expanded="true" signature="332:1196" placeholder="SELECT bk.bi... bible_book_kind_value_seconds" />
+            <marker date="1490518123000" expanded="true" signature="1377:2042" placeholder="SELECT bk.bi... bible_book_kind_value_seconds" />
+            <marker date="1490518123000" expanded="true" signature="2229:2809" placeholder="SELECT bk.bi... bible_book_kind_value_seconds" />
+            <marker date="1490518123000" expanded="true" signature="2894:2991" placeholder="SELECT count... " />
+            <marker date="1490518123000" expanded="true" signature="3111:3229" placeholder="SELECT book_... today_paragraph" />
+            <marker date="1490518123000" expanded="true" signature="3295:3481" placeholder="INSERT INTO today_paragraph... " />
           </folding>
         </state>
       </provider>
@@ -2181,14 +2234,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.98717946">
-          <caret line="192" column="31" selection-start-line="192" selection-start-column="31" selection-end-line="192" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mybatis-generater.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-20.833334">
@@ -2200,7 +2245,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.125">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2220,21 +2264,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/MainVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/target/classes/mapper/test/getBible_SQL.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <marker date="1490264855000" expanded="true" signature="1244:1909" placeholder="SELECT bk.bi... bible_book_kind_value_seconds" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2262,46 +2296,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/controller/MainBibleController.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ohjic/bible/api/model/MainDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="35" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/model/BibleSearchDao.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ohjic/bible/api/model/mainRestControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/model/MainDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/test/test_SQL.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.875">
+          <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#715#716#0" expanded="true" />
-            <element signature="e#767#768#0" expanded="true" />
+            <marker date="1490518136000" expanded="true" signature="281:302" placeholder="SELECT * fro... article" />
+            <marker date="1490518136000" expanded="true" signature="426:467" placeholder="SELECT * fro... article" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/BibleContentVO.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ohjic/bible/api/model/BibleSearchDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <caret line="30" column="107" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="107" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/test/getBible_SQL.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.75">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="29" />
+          <folding>
+            <marker date="1490518123000" expanded="true" signature="332:1196" placeholder="SELECT bk.bi... bible_book_kind_value_seconds" />
+            <marker date="1490518123000" expanded="true" signature="1377:2042" placeholder="SELECT bk.bi... bible_book_kind_value_seconds" />
+            <marker date="1490518123000" expanded="true" signature="2229:2809" placeholder="SELECT bk.bi... bible_book_kind_value_seconds" />
+            <marker date="1490518123000" expanded="true" signature="2894:2991" placeholder="SELECT count... " />
+            <marker date="1490518123000" expanded="true" signature="3111:3229" placeholder="SELECT book_... today_paragraph" />
+            <marker date="1490518123000" expanded="true" signature="3295:3481" placeholder="INSERT INTO today_paragraph... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ohjic/bible/api/service/MainServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/BibleContentJsonVO.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ohjic/bible/api/service/TestJunitTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/service/BibleSearchService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/controller/MainBibleController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="113" selection-start-line="16" selection-start-column="113" selection-end-line="16" selection-end-column="113" />
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -2314,23 +2388,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/test/test_SQL.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/MainModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.875">
-          <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/controller/MainRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="59" selection-start-line="66" selection-start-column="56" selection-end-line="66" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/model/BibleSearchDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding>
-            <marker date="1490260358000" expanded="true" signature="278:299" placeholder="SELECT * fro... article" />
-            <marker date="1490260358000" expanded="true" signature="420:441" placeholder="SELECT * fro... article" />
-            <marker date="1490260358000" expanded="true" signature="420:448" placeholder="SELECT * fro... article" />
-            <marker date="1490260358000" expanded="true" signature="420:461" placeholder="SELECT * fro... article" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#734#735#0" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/BibleSerchVO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/BibleContentJsonModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="84" column="33" selection-start-line="84" selection-start-column="33" selection-end-line="84" selection-end-column="33" />
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/BibleContentModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.039216">
+          <caret line="203" column="16" selection-start-line="203" selection-start-column="16" selection-end-line="203" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/service/BibleSearchService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="117" selection-start-line="16" selection-start-column="117" selection-end-line="16" selection-end-column="117" />
           <folding />
         </state>
       </provider>
@@ -2338,29 +2459,29 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/service/BibleSearchServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="98" column="14" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
+          <caret line="49" column="71" selection-start-line="49" selection-start-column="71" selection-end-line="49" selection-end-column="71" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/test/getBible_SQL.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/vo/BibleSearchModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.833334">
-          <caret line="34" column="62" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
           <folding>
-            <marker date="1490264812000" expanded="true" signature="325:1070" placeholder="SELECT bk.bi... bible_book_kind_value_seconds" />
-            <marker date="1490264812000" expanded="true" signature="1244:1909" placeholder="SELECT bk.bi... bible_book_kind_value_seconds" />
-            <marker date="1490264812000" expanded="true" signature="2089:2669" placeholder="SELECT bk.bi... bible_book_kind_value_seconds" />
-            <marker date="1490264812000" expanded="true" signature="2785:2921" placeholder="SELECT book_... today_paragraph" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ohjic/bible/api/controller/BibleSearchController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5169492">
-          <caret line="59" column="120" selection-start-line="59" selection-start-column="119" selection-end-line="59" selection-end-column="120" />
-          <folding />
+        <state vertical-scroll-proportion="0.38265306">
+          <caret line="37" column="106" selection-start-line="37" selection-start-column="106" selection-end-line="37" selection-end-column="106" />
+          <folding>
+            <element signature="e#3540#3541#0" expanded="true" />
+            <element signature="e#3567#3568#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -4,7 +4,7 @@
 <mapper namespace="getBible">
 
 
-    <select id="bibleContents" resultType="com.ohjic.bible.api.vo.BibleContentVO" parameterType="com.ohjic.bible.api.vo.BibleSerchVO" >
+    <select id="bibleContents" resultType="com.ohjic.bible.api.vo.BibleContentModel" parameterType="com.ohjic.bible.api.vo.BibleSearchModel" >
 
         SELECT bk.bible_kind as bibleKind,bk.language, bk.book_name as bookName, bk.bible_max_chapter as bookMaxChapter
         , bbkv.chapter_max_paragraph as ChapterMaxParagraph ,bbkv.paragraph_value as paragraphValue, bbkv.chapter, bbkv.paragraph
@@ -17,7 +17,7 @@
         <if test="searchRange == 'paragraph'"> and bbkv.chapter = #{chapter} AND bbkv.paragraph BETWEEN #{firstParagraph} and #{lastParagraph}</if>
     </select>
 
-    <select id="getbibleSentenceSearch" resultType="com.ohjic.bible.api.vo.BibleContentVO" parameterType="com.ohjic.bible.api.vo.BibleSerchVO" >
+    <select id="getbibleSentenceSearch" resultType="com.ohjic.bible.api.vo.BibleContentModel" parameterType="com.ohjic.bible.api.vo.BibleSearchModel" >
         SELECT bk.bible_kind as bibleKind,bk.language, bk.book_name as bookName, bk.bible_max_chapter as bookMaxChapter
         , bbkv.chapter_max_paragraph as ChapterMaxParagraph ,bbkv.paragraph_value as paragraphValue, bbkv.chapter, bbkv.paragraph
         FROM bible_book_kind_value_seconds as bbkv
@@ -28,7 +28,7 @@
 
     </select>
 
-    <select id="getBibleParagraphValueSearch" resultType="com.ohjic.bible.api.vo.BibleContentVO" parameterType="com.ohjic.bible.api.vo.BibleSerchVO">
+    <select id="getBibleParagraphValueSearch" resultType="com.ohjic.bible.api.vo.BibleContentModel" parameterType="com.ohjic.bible.api.vo.BibleSearchModel">
         SELECT bk.bible_kind as bibleKind,bk.language, bk.book_name as bookName, bk.bible_max_chapter as bookMaxChapter
         , bbkv.chapter_max_paragraph as ChapterMaxParagraph ,bbkv.paragraph_value as paragraphValue, bbkv.chapter, bbkv.paragraph
         FROM bible_book_kind_value_seconds as bbkv
@@ -43,7 +43,7 @@
         WHERE today = date_format(now(),'%Y-%m-%d')
     </select>
 
-    <select id="selectTodayParagraphKey" resultType="com.ohjic.bible.api.vo.BibleSerchVO" >
+    <select id="selectTodayParagraphKey" resultType="com.ohjic.bible.api.vo.BibleSearchModel" >
         SELECT book_kind_idx as bookKindIdx, chapter, paragraph FROM today_paragraph
         WHERE today = date(now()) limit 1
     </select>

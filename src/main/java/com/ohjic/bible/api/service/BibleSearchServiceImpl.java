@@ -4,9 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ohjic.bible.api.model.BibleSearchDao;
-import com.ohjic.bible.api.vo.BibleContentJsonVO;
-import com.ohjic.bible.api.vo.BibleContentVO;
-import com.ohjic.bible.api.vo.BibleSerchVO;
+import com.ohjic.bible.api.vo.BibleContentJsonModel;
+import com.ohjic.bible.api.vo.BibleContentModel;
+import com.ohjic.bible.api.vo.BibleSearchModel;
 
 import java.util.List;
 
@@ -20,19 +20,19 @@ public class BibleSearchServiceImpl implements BibleSearchService{
     private BibleSearchDao bibleSearchDao;
 
     @Override
-    public List<BibleContentVO> getChapterContents(BibleSerchVO bibleSerchVO) {
-        List<BibleContentVO> chapterContents = bibleSearchDao.selectBibleContents("getBible.bibleContents",bibleSerchVO);
+    public List<BibleContentModel> getChapterContents(BibleSearchModel bibleSearchModel) {
+        List<BibleContentModel> chapterContents = bibleSearchDao.selectBibleContents("getBible.bibleContents", bibleSearchModel);
         return chapterContents;
     }
 
     @Override
-    public List<BibleContentVO> getParagraphContents(BibleSerchVO bibleSerchVO) {
-        List<BibleContentVO> paragraphContents = bibleSearchDao.selectBibleContents("getBible.bibleContents",bibleSerchVO);
+    public List<BibleContentModel> getParagraphContents(BibleSearchModel bibleSearchModel) {
+        List<BibleContentModel> paragraphContents = bibleSearchDao.selectBibleContents("getBible.bibleContents", bibleSearchModel);
         return paragraphContents;
     }
 
     @Override
-    public BibleContentJsonVO getParagraphContentsForSentence(int bibleIdx, String searchSentence) {
+    public BibleContentJsonModel getParagraphContentsForSentence(int bibleIdx, String searchSentence) {
 
         String bookName = "";
         String chapter = "";
@@ -41,13 +41,13 @@ public class BibleSearchServiceImpl implements BibleSearchService{
         String lastParagraph = "";
         String regExp = "[^0-9~-]";
         String[] paragraphList = null;
-        BibleSerchVO bibleSerchVO = null;
-        BibleContentJsonVO bibleContentJsonVO = null;
-        List<BibleContentVO> bibleContentVOList = null;
+        BibleSearchModel bibleSearchModel = null;
+        BibleContentJsonModel bibleContentJsonModel = null;
+        List<BibleContentModel> bibleContentModelList = null;
 
         String[] splitValue = this.sentenceReplaceAndSplit(searchSentence,":"," "," ");
 
-           /* length >=3 => 책 장 절 검사 , length ==2 => 책 장 검사 , 그외 검색 불능*/
+           /* length >=3 => 책 장 절 검사 , length ==2 => 책 장 검사 , 그외 검색 불능 */
         if(splitValue.length >=3){
             bookName = splitValue[0];
             chapter = splitValue[1].replaceAll(regExp,"");
@@ -65,40 +65,40 @@ public class BibleSearchServiceImpl implements BibleSearchService{
                     firstParagraph = lastParagraph = "";
                 }
 
-                bibleSerchVO = new BibleSerchVO(bibleIdx,bookName,Integer.parseInt(chapter),Integer.parseInt(firstParagraph),Integer.parseInt(lastParagraph),"paragraph");
-                bibleContentVOList = bibleSearchDao.selectBibleContents("getBible.getbibleSentenceSearch",bibleSerchVO);
-                bibleContentJsonVO = new BibleContentJsonVO("success","성공",bibleContentVOList);
+                bibleSearchModel = new BibleSearchModel(bibleIdx,bookName,Integer.parseInt(chapter),Integer.parseInt(firstParagraph),Integer.parseInt(lastParagraph),"paragraph");
+                bibleContentModelList = bibleSearchDao.selectBibleContents("getBible.getbibleSentenceSearch", bibleSearchModel);
+                bibleContentJsonModel = new BibleContentJsonModel("success","성공", bibleContentModelList);
             }else{
-                 bibleContentJsonVO = new BibleContentJsonVO("fail","can not search");
+                 bibleContentJsonModel = new BibleContentJsonModel("fail","적합한 검색어 수식이 아닙니다.");
             }
 
         }else if(splitValue.length == 2){
             bookName = splitValue[0];
             chapter = splitValue[1].replaceAll(regExp,"");
-            bibleSerchVO = new BibleSerchVO(bibleIdx,bookName,Integer.parseInt(chapter),"chapter");
-            bibleContentVOList = bibleSearchDao.selectBibleContents("getBible.getbibleSentenceSearch",bibleSerchVO);
-            bibleContentJsonVO = new BibleContentJsonVO("success","성공",bibleContentVOList);
+            bibleSearchModel = new BibleSearchModel(bibleIdx,bookName,Integer.parseInt(chapter),"chapter");
+            bibleContentModelList = bibleSearchDao.selectBibleContents("getBible.getbibleSentenceSearch", bibleSearchModel);
+            bibleContentJsonModel = new BibleContentJsonModel("success","성공", bibleContentModelList);
         }else{
-             bibleContentJsonVO = new BibleContentJsonVO("fail","can not search");
+             bibleContentJsonModel = new BibleContentJsonModel("fail","적합한 검색어 수식이 아닙니다.");
         }
 
-        return bibleContentJsonVO;
+        return bibleContentJsonModel;
     }
 
     @Override
-    public BibleContentJsonVO getParagraphContentsForParagraphValue(int bibleIdx, String paragraphValue,int limit) {
-        BibleContentJsonVO bibleContentJsonVO = null;
-        BibleSerchVO bibleSerchVO = null;
+    public BibleContentJsonModel getParagraphContentsForParagraphValue(int bibleIdx, String paragraphValue, int limit) {
+        BibleContentJsonModel bibleContentJsonModel = null;
+        BibleSearchModel bibleSearchModel = null;
 
-        bibleSerchVO = new BibleSerchVO(bibleIdx,paragraphValue,limit, limit + 20);
-        List<BibleContentVO> bibleContentVO = bibleSearchDao.selectBibleContents("getBible.getBibleParagraphValueSearch",bibleSerchVO);
-        if(bibleContentVO.size() >0){
-             bibleContentJsonVO = new BibleContentJsonVO("success","성공",bibleContentVO);
+        bibleSearchModel = new BibleSearchModel(bibleIdx,paragraphValue,limit, limit + 20);
+        List<BibleContentModel> bibleContentModel = bibleSearchDao.selectBibleContents("getBible.getBibleParagraphValueSearch", bibleSearchModel);
+        if(bibleContentModel.size() >0){
+             bibleContentJsonModel = new BibleContentJsonModel("success","성공", bibleContentModel);
         }else{
-             bibleContentJsonVO = new BibleContentJsonVO("none","조회 결과가 없습니다");
+             bibleContentJsonModel = new BibleContentJsonModel("none","조회 결과가 없습니다");
         }
 
-        return bibleContentJsonVO;
+        return bibleContentJsonModel;
     }
 
     @Override
@@ -109,10 +109,10 @@ public class BibleSearchServiceImpl implements BibleSearchService{
     }
 
     @Override
-    public BibleContentJsonVO getTodayParagraphValue(int bibleIdx) {
-        BibleSerchVO bibleSerchVO = null;
-        BibleContentJsonVO bibleContentJsonVO = null;
-        List<BibleContentVO> bibleContentVOs = null;
+    public BibleContentJsonModel getTodayParagraphValue(int bibleIdx) {
+        BibleSearchModel bibleSearchModel = null;
+        BibleContentJsonModel bibleContentJsonModel = null;
+        List<BibleContentModel> bibleContentModels = null;
         int todayParagraphCount = 0;
 
         todayParagraphCount = bibleSearchDao.selectTodayParagraphCount("getBible.selectTodayParagraphCount");
@@ -121,18 +121,18 @@ public class BibleSearchServiceImpl implements BibleSearchService{
             bibleSearchDao.InsertTodayParagraph("getBible.insertTodayParagraphKey");
         }
 
-        bibleSerchVO = bibleSearchDao.selectBibleSearchKey("getBible.selectTodayParagraphKey");
-        bibleSerchVO.setBibleIdx(bibleIdx);
-        bibleSerchVO.setsearchRange("oneParagraph");
-        bibleContentVOs = bibleSearchDao.selectBibleContents("getBible.bibleContents",bibleSerchVO);
+        bibleSearchModel = bibleSearchDao.selectBibleSearchKey("getBible.selectTodayParagraphKey");
+        bibleSearchModel.setBibleIdx(bibleIdx);
+        bibleSearchModel.setsearchRange("oneParagraph");
+        bibleContentModels = bibleSearchDao.selectBibleContents("getBible.bibleContents", bibleSearchModel);
 
-        if(bibleContentVOs.size() >0){
-            bibleContentJsonVO = new BibleContentJsonVO("success","성공",bibleContentVOs);
+        if(bibleContentModels.size() >0){
+            bibleContentJsonModel = new BibleContentJsonModel("success","성공", bibleContentModels);
         }else{
-            bibleContentJsonVO = new BibleContentJsonVO("none","조회 결과가 없습니다");
+            bibleContentJsonModel = new BibleContentJsonModel("none","조회 결과가 없습니다");
         }
 
-        return bibleContentJsonVO;
+        return bibleContentJsonModel;
     }
 
     @Override

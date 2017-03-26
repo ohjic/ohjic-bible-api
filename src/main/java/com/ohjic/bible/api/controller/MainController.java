@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.ohjic.bible.api.service.MainService;
-import com.ohjic.bible.api.vo.MainVO;
+import com.ohjic.bible.api.vo.MainModel;
 
 import java.util.List;
 
@@ -25,8 +25,8 @@ public class MainController {
     @RequestMapping(value = "/todo" , method = RequestMethod.GET)
     public String main(Model model) throws Exception {
 
-        List<MainVO> mainVOList = mainService.serviceDaoTest();
-        model.addAttribute("articleList",mainVOList);
+        List<MainModel> mainModelList = mainService.serviceDaoTest();
+        model.addAttribute("articleList", mainModelList);
         model.addAttribute("hello","sungin hi");
         return "hello";
     }

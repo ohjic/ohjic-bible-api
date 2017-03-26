@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Created by hwangseong-in on 2017. 2. 21..
  */
-public class MainVO {
+public class MainModel {
     private int article_id;
     private int group_id;
     private String multiboard_no;

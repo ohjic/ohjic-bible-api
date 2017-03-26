@@ -1,10 +1,13 @@
 package com.ohjic.bible.api.vo;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
 /**
  * Created by hwangseong-in on 2017. 3. 14..
  */
 /* 성경 검색 용 VO*/
-public class BibleSerchVO {
+public class BibleSearchModel {
 
     /*성격 종류 키*/
     private int bibleIdx;
@@ -31,10 +34,10 @@ public class BibleSerchVO {
     private int startLimit;
     private int endLimit;
 
-    public BibleSerchVO() {}
+    public BibleSearchModel() {}
 
 
-    public BibleSerchVO(int bibleIdx, int bookKindIdx, String bookName, int chapter, int paragraph, String paragraphValue, int firstChapter, int lastChapter, int firstParagraph, int lastParagraph, String searchRange) {
+    public BibleSearchModel(int bibleIdx, int bookKindIdx, String bookName, int chapter, int paragraph, String paragraphValue, int firstChapter, int lastChapter, int firstParagraph, int lastParagraph, String searchRange) {
         this.bibleIdx = bibleIdx;
         this.bookKindIdx = bookKindIdx;
         this.bookName = bookName;
@@ -48,7 +51,7 @@ public class BibleSerchVO {
         this.searchRange = searchRange;
     }
 
-    public BibleSerchVO(int bibleIdx, int bookKindIdx, int chapter, int firstParagraph, int lastParagraph, String searchRange) {
+    public BibleSearchModel(int bibleIdx, int bookKindIdx, int chapter, int firstParagraph, int lastParagraph, String searchRange) {
         this.bibleIdx = bibleIdx;
         this.bookKindIdx = bookKindIdx;
         this.chapter = chapter;
@@ -57,7 +60,7 @@ public class BibleSerchVO {
         this.searchRange = searchRange;
     }
 
-    public BibleSerchVO(int bibleIdx, int bookKindIdx, int firstChapter, int lastChapter, String searchRange) {
+    public BibleSearchModel(int bibleIdx, int bookKindIdx, int firstChapter, int lastChapter, String searchRange) {
         this.bibleIdx = bibleIdx;
         this.bookKindIdx = bookKindIdx;
         this.firstChapter = firstChapter;
@@ -65,7 +68,7 @@ public class BibleSerchVO {
         this.searchRange = searchRange;
     }
 
-    public BibleSerchVO(int bibleIdx, String bookName, int chapter, int firstParagraph, int lastParagraph, String searchRange) {
+    public BibleSearchModel(int bibleIdx, String bookName, int chapter, int firstParagraph, int lastParagraph, String searchRange) {
         this.bibleIdx = bibleIdx;
         this.bookName = bookName;
         this.chapter = chapter;
@@ -74,21 +77,27 @@ public class BibleSerchVO {
         this.searchRange = searchRange;
     }
 
-    public BibleSerchVO(int bibleIdx, String bookName, int chapter, String searchRange) {
+    public BibleSearchModel(int bibleIdx, String bookName, int chapter, String searchRange) {
         this.bibleIdx = bibleIdx;
         this.bookName = bookName;
         this.chapter = chapter;
         this.searchRange = searchRange;
     }
 
-    public BibleSerchVO(int bibleIdx, String paragraphValue,int startLimit,int endLimit) {
+    public BibleSearchModel(int bibleIdx, String paragraphValue, int startLimit, int endLimit) {
         this.bibleIdx = bibleIdx;
         this.paragraphValue = paragraphValue;
         this.startLimit = startLimit;
         this.endLimit = endLimit;
     }
 
+    @Override
+    public String toString() {
+        return ToStringBuilder.reflectionToString(
+                this,
+                ToStringStyle.MULTI_LINE_STYLE);
 
+    }
 
     public int getBibleIdx() {
         return bibleIdx;
