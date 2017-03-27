@@ -4,11 +4,11 @@
 <mapper namespace="test">
 
     <!-- list 구현 sql -->
-    <select id="testSql" resultType="com.ohjic.bible.api.vo.MainModel" >
+    <select id="testSql" resultType="com.ohjic.bible.api.model.BibleMain" >
         SELECT * from article
     </select>
 
-    <select id="testSqlForParam" resultType="com.ohjic.bible.api.vo.MainModel" parameterType="int">
+    <select id="testSqlForParam" resultType="com.ohjic.bible.api.model.BibleMain" parameterType="int">
         SELECT * from article limit #{limitCount}
     </select>
 

@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.ohjic.bible.api.model.Main;
+import com.ohjic.bible.api.model.BibleMain;
 import com.ohjic.bible.api.service.MainService;
 
 import java.util.List;
@@ -25,7 +25,7 @@ public class MainController {
     @RequestMapping(value = "/todo" , method = RequestMethod.GET)
     public String main(Model model) throws Exception {
 
-        List<Main> mainModelList = mainService.serviceDaoTest();
+        List<BibleMain> mainModelList = mainService.serviceDaoTest();
         model.addAttribute("articleList", mainModelList);
         model.addAttribute("hello","sungin hi");
         return "hello";

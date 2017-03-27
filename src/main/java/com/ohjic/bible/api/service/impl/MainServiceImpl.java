@@ -3,7 +3,7 @@ package com.ohjic.bible.api.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.ohjic.bible.api.model.Main;
+import com.ohjic.bible.api.model.BibleMain;
 import com.ohjic.bible.api.persistent.MainDao;
 import com.ohjic.bible.api.service.MainService;
 
@@ -18,12 +18,12 @@ public class MainServiceImpl implements MainService {
     @Autowired
     private MainDao mainDao;
 
-    public List<Main> serviceDaoTest() throws Exception {
+    public List<BibleMain> serviceDaoTest() throws Exception {
         return mainDao.getMainDaoData("test.testSql");
     }
 
     @Override
-    public List<Main> serviceDaoTestForParam(int limitCount) throws Exception {
+    public List<BibleMain> serviceDaoTestForParam(int limitCount) throws Exception {
         return mainDao.getMainDaoDataForParam("test.testSqlForParam",limitCount);
     }
 }

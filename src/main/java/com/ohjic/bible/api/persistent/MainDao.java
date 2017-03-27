@@ -4,7 +4,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.ohjic.bible.api.model.Main;
+import com.ohjic.bible.api.model.BibleMain;
 
 import java.util.List;
 
@@ -16,11 +16,11 @@ public class MainDao {
     @Autowired
     private SqlSessionTemplate sqlSession;
 
-    public List<Main> getMainDaoData(String queryId){
+    public List<BibleMain> getMainDaoData(String queryId){
         return sqlSession.selectList(queryId);
     }
 
-    public List<Main> getMainDaoDataForParam(String queryId, int limitCount){
+    public List<BibleMain> getMainDaoDataForParam(String queryId, int limitCount){
         return sqlSession.selectList(queryId,limitCount);
     }
 }

@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Created by hwangseong-in on 2017. 2. 21..
  */
-public class Main {
+public class BibleMain {
     private int article_id;
     private int group_id;
     private String multiboard_no;

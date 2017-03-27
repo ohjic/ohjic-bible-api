@@ -13,17 +13,17 @@ public interface BibleSearchService {
 
 	/**
 	 * 
-	 * @param bibleSearchModel
+	 * @param bibleSearch
 	 * @return
 	 */
-    public List<BibleContent> getChapterContents(BibleSearch bibleSearchModel);
+    public List<BibleContent> getChapterContents(BibleSearch bibleSearch);
     
     /**
      * 
-     * @param bibleSearchModel
+     * @param bibleSearch
      * @return
      */
-    public List<BibleContent> getParagraphContents(BibleSearch bibleSearchModel);
+    public List<BibleContent> getParagraphContents(BibleSearch bibleSearch);
     
     /**
      * 

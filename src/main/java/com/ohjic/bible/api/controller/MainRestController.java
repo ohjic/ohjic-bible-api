@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ohjic.bible.api.model.Main;
+import com.ohjic.bible.api.model.BibleMain;
 import com.ohjic.bible.api.service.MainService;
 
 import java.util.Arrays;
@@ -25,22 +25,22 @@ public class MainRestController {
     private MainService mainService;
 
     @RequestMapping(value = "/test", method = RequestMethod.GET, headers = "accept=application/json")
-    protected List<Main> restTest() throws Exception {
+    protected List<BibleMain> restTest() throws Exception {
         return mainService.serviceDaoTest();
 
     }
 
     @RequestMapping(value = "/testParam/{value}", method = RequestMethod.GET, headers = "accept=application/json")
-    protected List<Main> restTestForparam(@PathVariable int value) throws Exception {
+    protected List<BibleMain> restTestForparam(@PathVariable int value) throws Exception {
         System.out.println(value);
         return mainService.serviceDaoTestForParam(value);
     }
 
 
     @RequestMapping(value = "/testFilterStream", method = RequestMethod.GET, headers = "accept=application/json")
-    public List<Main> restStreamTest() throws Exception {
+    public List<BibleMain> restStreamTest() throws Exception {
 
-        List<Main> mainModelList = mainService.serviceDaoTest();
+        List<BibleMain> mainModelList = mainService.serviceDaoTest();
         return mainModelList.stream().filter(e->e.getArticle_id() >10).collect(Collectors.toList());
 
     }
@@ -48,7 +48,7 @@ public class MainRestController {
     @RequestMapping(value = "/testMapStream", method = RequestMethod.GET, headers = "accept=application/json")
     public List<String> restStreamMapTest() throws Exception {
 
-        List<Main> mainModelList = mainService.serviceDaoTest();
+        List<BibleMain> mainModelList = mainService.serviceDaoTest();
         return mainModelList.stream().filter(e->e.getArticle_id() >10).map(e -> e.getWriter_name()).collect(Collectors.toList());
 
     }
