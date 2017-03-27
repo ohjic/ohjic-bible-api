@@ -6,8 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.ohjic.bible.api.model.MainDao;
-import com.ohjic.bible.api.vo.MainVO;
+import com.ohjic.bible.api.vo.MainModel;
 
 import java.util.List;
 
@@ -30,9 +29,9 @@ public class MainDaoTest {
     @Test
     public void testGetMainDaoData() throws Exception {
 
-        List<MainVO> mainVOs = mainDao.getMainDaoData("test.testSql");
-        System.out.println(mainVOs);
-        assertTrue(mainVOs.size() >0);
+        List<MainModel> mainModels = mainDao.getMainDaoData("test.testSql");
+        System.out.println(mainModels);
+        assertTrue(mainModels.size() >0);
     }
 
 }
