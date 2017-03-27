@@ -1,4 +1,4 @@
-package com.ohjic.bible.api.model;
+package com.ohjic.bible.api.persistent;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

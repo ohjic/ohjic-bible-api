@@ -1,4 +1,4 @@
-package com.ohjic.bible.api.model;
+package com.ohjic.bible.api.controller;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -28,7 +28,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
         "file:src/main/resources/spring/database-Context.xml",
         "file:src/main/resources/spring/mapper-Context.xml",
         "file:src/main/resources/spring/applicationContext.xml"})
-public class mainRestControllerTest {
+public class MainRestControllerTest {
 
     @Mock
     private MainService mainService;
