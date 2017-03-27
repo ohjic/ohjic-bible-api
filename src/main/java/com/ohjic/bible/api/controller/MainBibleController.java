@@ -21,7 +21,7 @@ import java.util.List;
 @RequestMapping(value = "/mainBible")
 public class MainBibleController {
 
-     protected static Logger LOGGER = LoggerFactory.getLogger(MainBibleController.class);
+     protected static Logger logger = LoggerFactory.getLogger(MainBibleController.class);
 
     @Autowired
     private BibleSearchServiceImpl bibleSearchService;
@@ -34,7 +34,7 @@ public class MainBibleController {
 
         /*로깅처리 할수 있도록*/
         List<BibleContent> capterContents = bibleSearchService.getChapterContents(bibleSearchModel);
-        LOGGER.info("================로그 체킹 테스트 중입니다================","xptmxm");
+        logger.debug("================로그 체킹 테스트 중입니다================","xptmxm");
         return capterContents;
     }
 

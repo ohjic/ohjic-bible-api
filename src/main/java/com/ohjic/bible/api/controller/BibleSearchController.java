@@ -19,7 +19,7 @@ import java.util.List;
 @RequestMapping(value = "/bible")
 public class BibleSearchController {
 
-    protected static Logger LOGGER = LoggerFactory.getLogger(BibleSearchController.class);
+    protected static Logger logger = LoggerFactory.getLogger(BibleSearchController.class);
 
     @Autowired
     private BibleSearchServiceImpl bibleSearchService;
@@ -36,9 +36,9 @@ public class BibleSearchController {
 
         /*로깅처리 할수 있도록*/
         List<BibleContent> chapterContents = bibleSearchService.getChapterContents(bibleSearchModel);
-        LOGGER.info("================start-getBibleChapterContents================");
-        LOGGER.info(bibleSearchModel.toString());
-        LOGGER.info("================end-getBibleChapterContents==================");
+        logger.debug("================start-getBibleChapterContents================");
+        logger.debug(bibleSearchModel.toString());
+        logger.debug("================end-getBibleChapterContents==================");
         return chapterContents;
     }
 
@@ -51,9 +51,9 @@ public class BibleSearchController {
                                                              @RequestParam(value = "lastParagraph" ,required = true,defaultValue = "1") int lastParagraph){
         BibleSearch bibleSearchModel = new BibleSearch(bibleIdx,bookKindIdx,chapter,firstParagraph,lastParagraph,"paragraph");
         List<BibleContent> ParagraphContents = bibleSearchService.getParagraphContents(bibleSearchModel);
-        LOGGER.info("================start-getBibleParagraphContents================");
-        LOGGER.info(bibleSearchModel.toString());
-        LOGGER.info("================end-getBibleParagraphContents==================");
+        logger.debug("================start-getBibleParagraphContents================");
+        logger.debug(bibleSearchModel.toString());
+        logger.debug("================end-getBibleParagraphContents==================");
         return ParagraphContents;
     }
 
@@ -67,8 +67,8 @@ public class BibleSearchController {
     public BibleContentJson getBibleForSentence(@PathVariable int bibleIdx , @PathVariable String textValue){
         BibleContentJson bibleContentJsonModel = bibleSearchService.getParagraphContentsForSentence(bibleIdx,textValue);
 
-        LOGGER.info("================start-getBibleForSentence================");
-        LOGGER.info("================end-getBibleForSentence==================");
+        logger.debug("================start-getBibleForSentence================");
+        logger.debug("================end-getBibleForSentence==================");
         return bibleContentJsonModel;
     }
 
@@ -78,8 +78,8 @@ public class BibleSearchController {
                                                            @RequestParam(value = "limit" ,required = true,defaultValue = "0") int Limit){
         BibleContentJson bibleContentJsonModel = bibleSearchService.getParagraphContentsForParagraphValue(bibleIdx,paragraphValue,Limit);
 
-        LOGGER.info("================start-getBibleForParagraphValue================");
-        LOGGER.info("================end-getBibleForParagraphValue==================");
+        logger.debug("================start-getBibleForParagraphValue================");
+        logger.debug("================end-getBibleForParagraphValue==================");
 
         return bibleContentJsonModel;
     }
@@ -89,8 +89,8 @@ public class BibleSearchController {
     public BibleContentJson getBibleForParagraphValue(@PathVariable int bibleIdx ){
         BibleContentJson bibleContentJsonModel = bibleSearchService.getTodayParagraphValue(bibleIdx);
 
-        LOGGER.info("================start-getBibleForParagraphValue================");
-        LOGGER.info("================end-getBibleForParagraphValue==================");
+        logger.debug("================start-getBibleForParagraphValue================");
+        logger.debug("================end-getBibleForParagraphValue==================");
 
         return bibleContentJsonModel;
     }

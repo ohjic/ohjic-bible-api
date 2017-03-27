@@ -26,17 +26,14 @@ public class MainRestController {
 
     @RequestMapping(value = "/test", method = RequestMethod.GET, headers = "accept=application/json")
     protected List<Main> restTest() throws Exception {
-
-        List<Main> mainModelList = mainService.serviceDaoTest();
-        return mainModelList;
+        return mainService.serviceDaoTest();
 
     }
 
     @RequestMapping(value = "/testParam/{value}", method = RequestMethod.GET, headers = "accept=application/json")
     protected List<Main> restTestForparam(@PathVariable int value) throws Exception {
         System.out.println(value);
-        List<Main> mainModelList = mainService.serviceDaoTestForParam(value);
-        return mainModelList;
+        return mainService.serviceDaoTestForParam(value);
     }
 
 
@@ -44,9 +41,7 @@ public class MainRestController {
     public List<Main> restStreamTest() throws Exception {
 
         List<Main> mainModelList = mainService.serviceDaoTest();
-        List<Main> mainStreamVOList = mainModelList.stream().filter(e->e.getArticle_id() >10).collect(Collectors.toList());
-
-        return mainStreamVOList;
+        return mainModelList.stream().filter(e->e.getArticle_id() >10).collect(Collectors.toList());
 
     }
 
@@ -54,9 +49,7 @@ public class MainRestController {
     public List<String> restStreamMapTest() throws Exception {
 
         List<Main> mainModelList = mainService.serviceDaoTest();
-        List<String> mainStreamVOList = mainModelList.stream().filter(e->e.getArticle_id() >10).map(e -> e.getWriter_name()).collect(Collectors.toList());
-
-        return mainStreamVOList;
+        return mainModelList.stream().filter(e->e.getArticle_id() >10).map(e -> e.getWriter_name()).collect(Collectors.toList());
 
     }
 

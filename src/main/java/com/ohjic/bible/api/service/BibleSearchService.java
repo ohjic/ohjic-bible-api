@@ -11,11 +11,56 @@ import com.ohjic.bible.api.model.BibleSearch;
  */
 public interface BibleSearchService {
 
+	/**
+	 * 
+	 * @param bibleSearchModel
+	 * @return
+	 */
     public List<BibleContent> getChapterContents(BibleSearch bibleSearchModel);
+    
+    /**
+     * 
+     * @param bibleSearchModel
+     * @return
+     */
     public List<BibleContent> getParagraphContents(BibleSearch bibleSearchModel);
+    
+    /**
+     * 
+     * @param bibleIdx
+     * @param searchSentence
+     * @return
+     */
     public BibleContentJson getParagraphContentsForSentence(int bibleIdx, String searchSentence);
+    
+    /**
+     * 
+     * @param bibleIdx
+     * @param paragraphValue
+     * @param limit
+     * @return
+     */
     public BibleContentJson getParagraphContentsForParagraphValue(int bibleIdx, String paragraphValue, int limit);
+    
+    /**
+     * 
+     * @param bibleIdx
+     * @return
+     */
     public BibleContentJson getTodayParagraphValue(int bibleIdx);
+    
+    /**
+     * 
+     */
     public void registTodayParagraphValue();
+    
+    /**
+     * 
+     * @param TargetText
+     * @param replaceMatchValue
+     * @param replaceChangeValue
+     * @param SplitValue
+     * @return
+     */
     public String[] sentenceReplaceAndSplit(String TargetText, String replaceMatchValue,String replaceChangeValue,String SplitValue);
 }

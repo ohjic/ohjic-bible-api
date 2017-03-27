@@ -9,6 +9,18 @@ import com.ohjic.bible.api.model.Main;
  */
 public interface MainService {
 
+	/**
+	 * 
+	 * @return
+	 * @throws Exception
+	 */
    public List<Main> serviceDaoTest()throws Exception;
+   
+   /**
+    * 
+    * @param limit
+    * @return
+    * @throws Exception
+    */
    public List<Main> serviceDaoTestForParam(int limit)throws Exception;
 }
