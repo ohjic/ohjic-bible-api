@@ -1,9 +1,9 @@
-package com.ohjic.bible.api.vo;
+package com.ohjic.bible.api.model;
 
 /**
  * Created by hwangseong-in on 2017. 3. 13..
  */
-public class BibleContentModel {
+public class BibleContent {
 
     /*성경종류 인덱스*/
     private int bibleIndex;

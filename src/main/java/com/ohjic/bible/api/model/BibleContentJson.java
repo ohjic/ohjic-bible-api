@@ -1,22 +1,22 @@
-package com.ohjic.bible.api.vo;
+package com.ohjic.bible.api.model;
 
 import java.util.List;
 
 /**
  * Created by hwangseong-in on 2017. 3. 22..
  */
-public class BibleContentJsonModel {
+public class BibleContentJson {
     private String status;
     private String msg;
-    private List<BibleContentModel> bibleContentModelList;
+    private List<BibleContent> bibleContentModelList;
 
-    public BibleContentJsonModel(String status, String msg, List<BibleContentModel> bibleContentModelList) {
+    public BibleContentJson(String status, String msg, List<BibleContent> bibleContentModelList) {
         this.status = status;
         this.msg = msg;
         this.bibleContentModelList = bibleContentModelList;
     }
 
-    public BibleContentJsonModel(String status, String msg) {
+    public BibleContentJson(String status, String msg) {
         this.status = status;
         this.msg = msg;
     }
@@ -37,11 +37,11 @@ public class BibleContentJsonModel {
         this.msg = msg;
     }
 
-    public List<BibleContentModel> getBibleContentModelList() {
+    public List<BibleContent> getBibleContentModelList() {
         return bibleContentModelList;
     }
 
-    public void setBibleContentModelList(List<BibleContentModel> bibleContentModelList) {
+    public void setBibleContentModelList(List<BibleContent> bibleContentModelList) {
         this.bibleContentModelList = bibleContentModelList;
     }
 }

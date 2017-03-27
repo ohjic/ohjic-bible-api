@@ -4,8 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import com.ohjic.bible.api.vo.BibleContentJsonModel;
-import com.ohjic.bible.api.vo.BibleSearchModel;
+import com.ohjic.bible.api.model.BibleContentJson;
+import com.ohjic.bible.api.model.BibleSearch;
 
 /**
  * Created by hwangseong-in on 2017. 3. 1..
@@ -36,8 +36,8 @@ public class TestJunitTest {
             String firstParagraphTest = "";
             String lastParagraphTest = "";
             String searchRange = "";
-            BibleSearchModel bibleSearchModel;
-            BibleContentJsonModel bibleContentJsonModel;
+            BibleSearch bibleSearchModel;
+            BibleContentJson bibleContentJsonModel;
             String[] splitValue = testJunit.testBibleSplit(testValue,":"," "," ");
 
            /* length >=3 => 책 장 절 검사 , length ==2 => 책 장 검사 , 그외 검색 불능*/
@@ -57,7 +57,7 @@ public class TestJunitTest {
                     }else{
                         firstParagraphTest = lastParagraphTest = "";
                     }
-                    bibleSearchModel = new BibleSearchModel(1,bookName,Integer.parseInt(chapter),Integer.parseInt(firstParagraphTest),Integer.parseInt(lastParagraphTest),searchRange);
+                    bibleSearchModel = new BibleSearch(1,bookName,Integer.parseInt(chapter),Integer.parseInt(firstParagraphTest),Integer.parseInt(lastParagraphTest),searchRange);
                 }else{
                     System.out.println("can not Search");
                 }
@@ -66,7 +66,7 @@ public class TestJunitTest {
                 bookName = splitValue[0];
                 chapter = splitValue[1].replaceAll(regExp,"");
                 searchRange = "chapter";
-                bibleSearchModel = new BibleSearchModel(1,bookName,Integer.parseInt(chapter),searchRange);
+                bibleSearchModel = new BibleSearch(1,bookName,Integer.parseInt(chapter),searchRange);
             }else{
                 System.out.println("can not Search");
             }

@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ohjic.bible.api.model.Main;
 import com.ohjic.bible.api.service.MainService;
-import com.ohjic.bible.api.vo.MainModel;
 
 import java.util.Arrays;
 import java.util.List;
@@ -25,26 +25,26 @@ public class MainRestController {
     private MainService mainService;
 
     @RequestMapping(value = "/test", method = RequestMethod.GET, headers = "accept=application/json")
-    protected List<MainModel> restTest() throws Exception {
+    protected List<Main> restTest() throws Exception {
 
-        List<MainModel> mainModelList = mainService.serviceDaoTest();
+        List<Main> mainModelList = mainService.serviceDaoTest();
         return mainModelList;
 
     }
 
     @RequestMapping(value = "/testParam/{value}", method = RequestMethod.GET, headers = "accept=application/json")
-    protected List<MainModel> restTestForparam(@PathVariable int value) throws Exception {
+    protected List<Main> restTestForparam(@PathVariable int value) throws Exception {
         System.out.println(value);
-        List<MainModel> mainModelList = mainService.serviceDaoTestForParam(value);
+        List<Main> mainModelList = mainService.serviceDaoTestForParam(value);
         return mainModelList;
     }
 
 
     @RequestMapping(value = "/testFilterStream", method = RequestMethod.GET, headers = "accept=application/json")
-    public List<MainModel> restStreamTest() throws Exception {
+    public List<Main> restStreamTest() throws Exception {
 
-        List<MainModel> mainModelList = mainService.serviceDaoTest();
-        List<MainModel> mainStreamVOList = mainModelList.stream().filter(e->e.getArticle_id() >10).collect(Collectors.toList());
+        List<Main> mainModelList = mainService.serviceDaoTest();
+        List<Main> mainStreamVOList = mainModelList.stream().filter(e->e.getArticle_id() >10).collect(Collectors.toList());
 
         return mainStreamVOList;
 
@@ -53,7 +53,7 @@ public class MainRestController {
     @RequestMapping(value = "/testMapStream", method = RequestMethod.GET, headers = "accept=application/json")
     public List<String> restStreamMapTest() throws Exception {
 
-        List<MainModel> mainModelList = mainService.serviceDaoTest();
+        List<Main> mainModelList = mainService.serviceDaoTest();
         List<String> mainStreamVOList = mainModelList.stream().filter(e->e.getArticle_id() >10).map(e -> e.getWriter_name()).collect(Collectors.toList());
 
         return mainStreamVOList;

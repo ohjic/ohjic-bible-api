@@ -1,11 +1,11 @@
-package com.ohjic.bible.api.vo;
+package com.ohjic.bible.api.model;
 
 import java.util.Date;
 
 /**
  * Created by hwangseong-in on 2017. 2. 21..
  */
-public class MainModel {
+public class Main {
     private int article_id;
     private int group_id;
     private String multiboard_no;

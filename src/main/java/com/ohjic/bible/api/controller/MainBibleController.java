@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ohjic.bible.api.service.BibleSearchServiceImpl;
-import com.ohjic.bible.api.vo.BibleContentModel;
-import com.ohjic.bible.api.vo.BibleSearchModel;
+import com.ohjic.bible.api.model.BibleContent;
+import com.ohjic.bible.api.model.BibleSearch;
+import com.ohjic.bible.api.service.impl.BibleSearchServiceImpl;
 
 import java.util.List;
 
@@ -27,27 +27,27 @@ public class MainBibleController {
     private BibleSearchServiceImpl bibleSearchService;
 
     @RequestMapping(value = "/chapter", method = RequestMethod.GET, headers = "accept=application/json")
-    public List<BibleContentModel> getBibleChapterContents(){
+    public List<BibleContent> getBibleChapterContents(){
         /*유지보수에서는 객체를 넘기는것이 용이*/
         /*컨트롤러 단 파라미터를 객체로 직업 받아 버리다.*/
-        BibleSearchModel bibleSearchModel = new BibleSearchModel(1,1,1,1,"chapter");
+        BibleSearch bibleSearchModel = new BibleSearch(1,1,1,1,"chapter");
 
         /*로깅처리 할수 있도록*/
-        List<BibleContentModel> capterContents = bibleSearchService.getChapterContents(bibleSearchModel);
+        List<BibleContent> capterContents = bibleSearchService.getChapterContents(bibleSearchModel);
         LOGGER.info("================로그 체킹 테스트 중입니다================","xptmxm");
         return capterContents;
     }
 
     @RequestMapping(value = "/paragraph", method = RequestMethod.GET, headers = "accept=application/json")
-    public List<BibleContentModel> getBibleParagraphContents(){
-        BibleSearchModel bibleSearchModel = new BibleSearchModel(1,1,1,1,2,"paragraph");
-        List<BibleContentModel> ParagraphContents = bibleSearchService.getParagraphContents(bibleSearchModel);
+    public List<BibleContent> getBibleParagraphContents(){
+        BibleSearch bibleSearchModel = new BibleSearch(1,1,1,1,2,"paragraph");
+        List<BibleContent> ParagraphContents = bibleSearchService.getParagraphContents(bibleSearchModel);
 
         return ParagraphContents;
     }
 
     @RequestMapping(value = "/bookList", method = RequestMethod.GET, headers = "accept=application/json")
-    public List<BibleContentModel> getBibleBookLists(){
+    public List<BibleContent> getBibleBookLists(){
         return null;
     }
 
