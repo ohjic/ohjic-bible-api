@@ -15,8 +15,10 @@ public class Constants {
     public static final int FIND_ONE_PARAGRAPH = 1;
     /* 문장형 검색 정규표현식*/
     public static final String SENTENCE_SEARCH_REGEXP = "[^0-9~-]";
-    /* 검색결과 없음*/
+    /*검색 실패 없음*/
     public static final String FAIL_SEARCH_MSG = "해당 검색결과에 해당하는 문장이 없습니다.";
+    /* 검색결과 성공이나 결과값없음*/
+    public static final String EMPTY_SEARCH_MSG = "값이 존재하지 않습니다.";/* 검색결과 성공*/
     /* 검색결과 성공*/
     public static final String SUCCESS_SEARCH_MSG = "검색에 성공하였습니다.";
     /* 페이지 당 나타낼 리스트 수*/

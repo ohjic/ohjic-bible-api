@@ -53,6 +53,7 @@ public class BibleSearchController {
                                                              @RequestParam(value = "chapter" ,required = true,defaultValue = "1") int chapter,
                                                              @RequestParam(value = "fitstParagraph" ,required = true,defaultValue = "1") int firstParagraph,
                                                              @RequestParam(value = "lastParagraph" ,required = true,defaultValue = "1") int lastParagraph){
+
         BibleSearchModel bibleSearchModel = new BibleSearchModel(bibleIdx,bookKindIdx,chapter,firstParagraph,lastParagraph,"paragraph");
         List<BibleContentModel> bibleContentModelList = bibleSearchService.getParagraphContents(bibleSearchModel);
         commonResponseJson = CommonUtil.ListObjectToCommonJson(bibleContentModelList,Constants.SUCCESS_SEARCH_MSG,Constants.FAIL_SEARCH_MSG);
@@ -71,6 +72,7 @@ public class BibleSearchController {
     /*성경 문장형 검색 ex.) 창세기 1장 1절, 창세기 1:1 창세기 1장 1~3 )*/
     @RequestMapping(value = "/sentence/{bibleIdx}/{textValue}", method = RequestMethod.GET, headers = "accept=application/json")
     public CommonResponseJson getBibleForSentence(@PathVariable int bibleIdx , @PathVariable String textValue){
+
         List<BibleContentModel> bibleContentModelList = bibleSearchService.getParagraphContentsForSentence(bibleIdx,textValue);
         commonResponseJson = CommonUtil.ListObjectToCommonJson(bibleContentModelList,Constants.SUCCESS_SEARCH_MSG,Constants.FAIL_SEARCH_MSG);
 
@@ -95,6 +97,7 @@ public class BibleSearchController {
     /* 오늘의 말씀 */
     @RequestMapping(value = "/todayParagraph/{bibleIdx}", method = RequestMethod.GET, headers = "accept=application/json")
     public CommonResponseJson getBibleForParagraphValue(@PathVariable int bibleIdx ){
+
         List<BibleContentModel> bibleContentModelList = bibleSearchService.getTodayParagraphValue(bibleIdx);
         commonResponseJson = CommonUtil.ListObjectToCommonJson(bibleContentModelList,Constants.SUCCESS_SEARCH_MSG,Constants.FAIL_SEARCH_MSG);
 
