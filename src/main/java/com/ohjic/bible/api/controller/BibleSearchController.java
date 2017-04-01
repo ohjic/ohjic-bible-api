@@ -1,6 +1,7 @@
 package com.ohjic.bible.api.controller;
 
 import com.ohjic.bible.api.common.Constants;
+import com.ohjic.bible.api.service.BibleSearchService;
 import com.ohjic.bible.api.util.CommonUtil;
 import com.ohjic.bible.api.vo.CommonResponseJson;
 import org.slf4j.Logger;
@@ -25,7 +26,7 @@ public class BibleSearchController {
     protected static Logger LOGGER = LoggerFactory.getLogger(BibleSearchController.class);
 
     @Autowired
-    private BibleSearchServiceImpl bibleSearchService;
+    private BibleSearchService bibleSearchService;
 
     private CommonResponseJson commonResponseJson;
 
