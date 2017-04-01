@@ -13,9 +13,10 @@ public interface BibleSearchService {
 
     public List<BibleContentModel> getChapterContents(BibleSearchModel bibleSearchModel);
     public List<BibleContentModel> getParagraphContents(BibleSearchModel bibleSearchModel);
-    public BibleContentJsonModel getParagraphContentsForSentence(int bibleIdx, String searchSentence);
-    public BibleContentJsonModel getParagraphContentsForParagraphValue(int bibleIdx, String paragraphValue, int limit);
-    public BibleContentJsonModel getTodayParagraphValue(int bibleIdx);
+    public List<BibleContentModel> getParagraphContentsForSentence(int bibleIdx, String searchSentence);
+    public List<BibleContentModel> getParagraphContentsForParagraphValue(int bibleIdx, String paragraphValue, int limit);
+    public List<BibleContentModel> getTodayParagraphValue(int bibleIdx);
     public void registTodayParagraphValue();
-    public String[] sentenceReplaceAndSplit(String TargetText, String replaceMatchValue,String replaceChangeValue,String SplitValue);
+    public List<BibleContentModel> getChapterForSentenceSearch(int bibleIdx, String[] sentenceSearchValue);
+    public List<BibleContentModel> getChapterAndParagraphForSentenceSearch(int bibleIdx, String[] sentenceSearchValue);
 }

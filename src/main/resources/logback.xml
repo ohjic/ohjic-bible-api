@@ -8,7 +8,7 @@
     </appender>
 
     <appender name="LOGFILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>/home/mydir/logs/my-web.log</file>
+        <file>/home/log/ohBible.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>my-web.%d{yyyy-MM-dd}.log</fileNamePattern>
             <!-- 30일 지난 파일은 삭제한다.  -->
@@ -21,7 +21,7 @@
 
     <!-- 	RULES for logging DEBUG < INFO < WARN < ERROR < FATAL.-->
     <logger name="myweb" additivity="false">
-        <level value="INFO"/>
+        <level value="DEBUG"/>
         <appender-ref ref="LOGFILE"/>
         <appender-ref ref="CONSOLE"/>
     </logger>

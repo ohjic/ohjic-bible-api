@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ohjic.bible.api.service.BibleSearchServiceImpl;
+import com.ohjic.bible.api.service.impl.BibleSearchServiceImpl;
 import com.ohjic.bible.api.vo.BibleContentModel;
 import com.ohjic.bible.api.vo.BibleSearchModel;
 
