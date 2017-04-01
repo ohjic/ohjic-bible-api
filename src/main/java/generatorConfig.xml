@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+<classPathEntry location="C:\Users\ohjic\.m2\repository\mysql\mysql-connector-java\5.1.32\mysql-connector-java-5.1.32.jar" />
+  <context id="context1" >
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/pray" userId="prayer" password="!inpion00" />
+    <javaModelGenerator targetPackage="com.gusfot.pray.model" targetProject="prayer" />
+    <sqlMapGenerator targetPackage="com.gusfot.pray.dao.mapper" targetProject="prayer" />
+    <javaClientGenerator targetPackage="com.gusfot.pray.dao" targetProject="prayer" type="XMLMAPPER" />
+    
+    <table schema="user" tableName="bible" >
+      <columnOverride column="email" property="email" />
+      <columnOverride column="password" property="password" />
+      <columnOverride column="name" property="name" />
+      <columnOverride column="phone" property="phone" />
+      <columnOverride column="reg_time" property="regTime" />
+	</table>
+	
+   	<table schema="pray" tableName="book_kind" >
+      <columnOverride column="pray_id" property="prayId" />
+      <columnOverride column="title" property="title" />
+      <columnOverride column="content" property="content" />
+      <columnOverride column="target_date" property="targetDate" />
+      <columnOverride column="is_achieved" property="isAchieved" />
+      <columnOverride column="achieved_time" property="achievedTime" />
+      <columnOverride column="userId" property="userId" />
+      <columnOverride column="reg_time" property="regTime" />
+	</table>
+	
+    <table schema="pray" tableName="bible_book_kind_value_seconds" >
+      <columnOverride column="moim_id" property="moimId" />
+      <columnOverride column="name" property="name" />
+      <columnOverride column="reg_user_id" property="regUserId" />
+      <columnOverride column="reg_time" property="regTime" />
+	</table>
+	
+
+  </context>
+</generatorConfiguration>
